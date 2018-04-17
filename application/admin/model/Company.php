@@ -42,11 +42,4 @@ class Company extends Model {
         });
     }
 
-    /**
-     * 查看页面
-     */
-    public function index() {
-
-    }
-
 }

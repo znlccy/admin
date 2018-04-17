@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:104:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\index.html";i:1523957096;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:97:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\category\index.html";i:1523111344;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -51,15 +51,23 @@
                             <?php endif; ?>
                             <div class="content">
                                 <div class="panel panel-default panel-intro">
-    <?php echo build_heading(); ?>
+    <div class="panel-heading">
+        <?php echo build_heading(null,FALSE); ?>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#all" data-toggle="tab"><?php echo __('All'); ?></a></li>
+            <?php if(is_array($typeList) || $typeList instanceof \think\Collection || $typeList instanceof \think\Paginator): if( count($typeList)==0 ) : echo "" ;else: foreach($typeList as $key=>$vo): ?>
+                <li><a href="#<?php echo $key; ?>" data-toggle="tab"><?php echo $vo; ?></a></li>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
 
+    </div>
     <div class="panel-body">
         <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="one">
                 <div class="widget-body no-padding">
                     <div id="toolbar" class="toolbar">
-                        <?php echo build_toolbar('refresh,edit,del'); ?>
-                        <div class="dropdown btn-group <?php echo $auth->check('user/user/multi')?'':'hide'; ?>">
+                        <?php echo build_toolbar(); ?>
+                        <div class="dropdown btn-group <?php echo $auth->check('category/multi')?'':'hide'; ?>">
                             <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> <?php echo __('More'); ?></a>
                             <ul class="dropdown-menu text-left" role="menu">
                                 <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> <?php echo __('Set to normal'); ?></a></li>
@@ -67,10 +75,9 @@
                             </ul>
                         </div>
                     </div>
-
-                    <table id="table" class="table table-striped table-bordered table-hover"
-                           data-operate-edit="<?php echo $auth->check('user/user/edit'); ?>"
-                           data-operate-del="<?php echo $auth->check('user/user/del'); ?>"
+                    <table id="table" class="table table-striped table-bordered table-hover" 
+                           data-operate-edit="<?php echo $auth->check('category/edit'); ?>" 
+                           data-operate-del="<?php echo $auth->check('category/del'); ?>" 
                            width="100%">
                     </table>
                 </div>
@@ -79,6 +86,7 @@
         </div>
     </div>
 </div>
+
                             </div>
                         </div>
                     </div>

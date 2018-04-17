@@ -14,7 +14,7 @@ class Company extends Backend {
     /**
      * 声明使用的表名
      */
-    protected $name = "tb_company";
+    protected $name = "company";
 
     /**
      * 模型
@@ -55,14 +55,12 @@ class Company extends Backend {
                 ->where($where)
                 ->order($sort, $order)
                 ->count();
-
             $list = $this->model
                 ->with('group')
                 ->where($where)
                 ->order($sort, $order)
                 ->limit($offset, $limit)
                 ->select();
-
             foreach ($list as $k => $v)
             {
                 $v->password = '';
