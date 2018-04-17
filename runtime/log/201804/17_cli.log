@@ -1,0 +1,82 @@
+[ 2018-04-17T11:41:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2018-04-17T11:41:36+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-17T11:41:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007000s ]
+[ 2018-04-17T11:41:51+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2018-04-17T11:41:51+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-17T11:41:51+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ 2018-04-17T11:46:39+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ 2018-04-17T11:46:39+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-17T11:46:39+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006000s ]
+[ 2018-04-17T11:46:39+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-17T11:46:39+08:00 ][ error ] [1]Class 'app\admin\command\Backend' not found[D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\command\FastAdmin5ad56e1f6bae7.php:10]
+[ 2018-04-17T11:49:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2018-04-17T11:49:05+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-17T11:49:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006001s ]
+[ 2018-04-17T11:49:05+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-17T11:49:05+08:00 ][ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\lang/zh-cn.php
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.037002s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.048003s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  `name` = 'company' LIMIT 1 [ RunTime:0.000000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'company' , 'Company' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1523936945 , 1523936945) [ RunTime:0.072004s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'company/import' LIMIT 1 [ RunTime:0.002001s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'company/index' LIMIT 1 [ RunTime:0.002000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'company/add' LIMIT 1 [ RunTime:0.002000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'company/edit' LIMIT 1 [ RunTime:0.002001s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'company/del' LIMIT 1 [ RunTime:0.001000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'company/multi' LIMIT 1 [ RunTime:0.002000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'company/import' , 'fa fa-circle-o' , 'Import' , 0 , 'normal' , 1523936945 , 1523936945) [ RunTime:0.014001s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'company/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1523936945 , 1523936945) [ RunTime:0.013000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'company/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1523936945 , 1523936945) [ RunTime:0.001000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'company/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1523936945 , 1523936945) [ RunTime:0.000000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'company/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1523936945 , 1523936945) [ RunTime:0.000000s ]
+[ 2018-04-17T11:49:05+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'company/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1523936945 , 1523936945) [ RunTime:0.001000s ]
+[ 2018-04-17T11:58:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2018-04-17T11:58:27+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-17T11:58:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005001s ]
+[ 2018-04-17T11:58:27+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-17T11:58:27+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-17T11:58:27+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.025001s ]
+[ 2018-04-17T11:58:27+08:00 ][ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  (  `name` LIKE 'addon%' ) [ RunTime:0.015001s ]
+[ 2018-04-17T11:58:35+08:00 ][ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  `id` IN (4,56,63,58,57,55,61,59,65,64,60,62) [ RunTime:0.002001s ]
+[ 2018-04-17T11:58:35+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 4 [ RunTime:0.086005s ]
+[ 2018-04-17T11:58:35+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 55 [ RunTime:0.119007s ]
+[ 2018-04-17T11:58:35+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 56 [ RunTime:0.125007s ]
+[ 2018-04-17T11:58:35+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 57 [ RunTime:0.098005s ]
+[ 2018-04-17T11:58:35+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 58 [ RunTime:0.196012s ]
+[ 2018-04-17T11:58:36+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 59 [ RunTime:0.121007s ]
+[ 2018-04-17T11:58:36+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 60 [ RunTime:0.092006s ]
+[ 2018-04-17T11:58:36+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 61 [ RunTime:0.137008s ]
+[ 2018-04-17T11:58:36+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 62 [ RunTime:0.183011s ]
+[ 2018-04-17T11:58:36+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 63 [ RunTime:0.077004s ]
+[ 2018-04-17T11:58:36+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 64 [ RunTime:0.085005s ]
+[ 2018-04-17T11:58:36+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 65 [ RunTime:0.059003s ]
+[ 2018-04-17T12:05:07+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2018-04-17T12:05:07+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-17T12:05:07+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005001s ]
+[ 2018-04-17T12:05:07+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-17T12:06:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2018-04-17T12:06:24+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-17T12:06:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ 2018-04-17T12:06:24+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-17T12:06:24+08:00 ][ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\lang/zh-cn.php
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.016001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.020001s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  `name` = 'data' LIMIT 1 [ RunTime:0.001000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'data' , 'Data' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1523937984 , 1523937984) [ RunTime:0.066004s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'data/index' LIMIT 1 [ RunTime:0.002001s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'data/add' LIMIT 1 [ RunTime:0.001000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'data/edit' LIMIT 1 [ RunTime:0.001000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'data/del' LIMIT 1 [ RunTime:0.001000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'data/multi' LIMIT 1 [ RunTime:0.001000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 92 , 'data/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1523937984 , 1523937984) [ RunTime:0.027001s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 92 , 'data/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1523937984 , 1523937984) [ RunTime:0.000000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 92 , 'data/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1523937984 , 1523937984) [ RunTime:0.001000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 92 , 'data/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1523937984 , 1523937984) [ RunTime:0.000000s ]
+[ 2018-04-17T12:06:24+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 92 , 'data/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1523937984 , 1523937984) [ RunTime:0.001000s ]
