@@ -3,15 +3,14 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2018/4/17
- * Time: 11:08
- * Comment: 弹幕数据实体类
+ * Time: 13:03
+ * Comment: 公司账号模型
  */
-
 namespace app\admin\model;
 
 use think\Model;
 
-class SpeakData extends Model {
+class CompanyAccount extends Model {
 
     /**
      * 开启自动写入时间

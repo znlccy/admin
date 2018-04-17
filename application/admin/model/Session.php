@@ -3,13 +3,13 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2018/4/17
- * Time: 12:05
- * Comment: 数据管理
+ * Time: 14:17
+ * Comment: 场次模型
  */
 namespace app\admin\model;
 
 use think\Model;
 
-class Data extends Model {
+class Session extends Model {
 
 }

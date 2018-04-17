@@ -4,14 +4,14 @@
  * User: Administrator
  * Date: 2018/4/17
  * Time: 11:08
- * Comment: 名气数据实体类
+ * Comment: 弹幕数据实体类
  */
 
 namespace app\admin\model;
 
 use think\Model;
 
-class PopularityData extends Model {
+class Speak extends Model {
 
     /**
      * 开启自动写入时间
@@ -29,4 +29,3 @@ class PopularityData extends Model {
     protected $updateTime = 'updatetime';
 
 }
-

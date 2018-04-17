@@ -10,7 +10,7 @@ namespace app\admin\model;
 
 use think\Model;
 
-class GiftDetail extends Model {
+class Detail extends Model {
 
     protected $autoWriteTimestamp = 'int';
 
