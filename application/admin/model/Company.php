@@ -13,6 +13,11 @@ use think\Model;
 class Company extends Model {
 
     /**
+     * 声明使用的表名
+     */
+    protected $name = "company";
+
+    /**
      * 开启自动写入时间
      */
     protected $autoWriteTimestamp = 'int';
@@ -27,5 +32,21 @@ class Company extends Model {
      */
     protected $updateTime = 'updatetime';
 
+    /**
+     * 初始化数据
+     */
+    public static function init()
+    {
+        self::beforeUpdate(function ($row) {
+            $changed = $row->getChangedData();
+        });
+    }
+
+    /**
+     * 查看页面
+     */
+    public function index() {
+
+    }
 
 }

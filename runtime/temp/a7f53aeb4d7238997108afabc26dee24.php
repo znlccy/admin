@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:93:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\data\index.html";i:1523938452;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:98:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\user\group\edit.html";i:1523111344;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,16 +50,47 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>数据管理</title>
-</head>
-<body>
-    数据管理
-</body>
-</html>
+                                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+    <input type="hidden" name="row[rules]" value="<?php echo $row['rules']; ?>" />
+    <div class="form-group">
+        <label for="c-name" class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="<?php echo $row['name']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="nickname" class="control-label col-xs-12 col-sm-2"><?php echo __('Permission'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <span class="text-muted"><input type="checkbox" name="" id="checkall" /> <label for="checkall"><small><?php echo __('Check all'); ?></small></label></span>
+            <span class="text-muted"><input type="checkbox" name="" id="expandall" /> <label for="expandall"><small><?php echo __('Expand all'); ?></small></label></span>
+
+            <div id="treeview"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-status" class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            <?php if(is_array($statusList) || $statusList instanceof \think\Collection || $statusList instanceof \think\Paginator): if( count($statusList)==0 ) : echo "" ;else: foreach($statusList as $key=>$vo): ?>
+            <label for="row[status]-<?php echo $key; ?>"><input id="row[status]-<?php echo $key; ?>" name="row[status]" type="radio" value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['status'])?$row['status']:explode(',',$row['status']))): ?>checked<?php endif; ?> /> <?php echo $vo; ?></label> 
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
+            <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
+        </div>
+    </div>
+</form>
+<script>
+    var nodeData = <?php echo json_encode($nodeList);; ?>;
+</script>
+
                             </div>
                         </div>
                     </div>

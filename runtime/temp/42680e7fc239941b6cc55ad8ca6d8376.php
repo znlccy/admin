@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:99:"D:\PHP-Environment\Apache2.4.29\htdocs\anchor\public/../application/admin\view\user\user\index.html";i:1523111344;s:88:"D:\PHP-Environment\Apache2.4.29\htdocs\anchor\application\admin\view\layout\default.html";i:1523111344;s:85:"D:\PHP-Environment\Apache2.4.29\htdocs\anchor\application\admin\view\common\meta.html";i:1523111344;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\anchor\application\admin\view\common\script.html";i:1523111344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:108:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\general\attachment\select.html";i:1523111344;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -7,14 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="renderer" content="webkit">
 
-<link rel="shortcut icon" href="/anchor/public/assets/img/favicon.ico" />
+<link rel="shortcut icon" href="/admin/public/assets/img/favicon.ico" />
 <!-- Loading Bootstrap -->
-<link href="/anchor/public/assets/css/backend<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.css?v=<?php echo \think\Config::get('site.version'); ?>" rel="stylesheet">
+<link href="/admin/public/assets/css/backend<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.css?v=<?php echo \think\Config::get('site.version'); ?>" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 <!--[if lt IE 9]>
-  <script src="/anchor/public/assets/js/html5shiv.js"></script>
-  <script src="/anchor/public/assets/js/respond.min.js"></script>
+  <script src="/admin/public/assets/js/html5shiv.js"></script>
+  <script src="/admin/public/assets/js/respond.min.js"></script>
 <![endif]-->
 <script type="text/javascript">
     var require = {
@@ -58,19 +58,12 @@
             <div class="tab-pane fade active in" id="one">
                 <div class="widget-body no-padding">
                     <div id="toolbar" class="toolbar">
-                        <?php echo build_toolbar('refresh,edit,del'); ?>
-                        <div class="dropdown btn-group <?php echo $auth->check('user/user/multi')?'':'hide'; ?>">
-                            <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> <?php echo __('More'); ?></a>
-                            <ul class="dropdown-menu text-left" role="menu">
-                                <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> <?php echo __('Set to normal'); ?></a></li>
-                                <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=hidden"><i class="fa fa-eye-slash"></i> <?php echo __('Set to hidden'); ?></a></li>
-                            </ul>
-                        </div>
+                        <?php echo build_toolbar('refresh'); if(request()->get('multiple') == 'true'): ?>
+                        <a class="btn btn-danger btn-choose-multi"><i class="fa fa-check"></i> <?php echo __('Choose'); ?></a>
+                        <?php endif; ?>
                     </div>
-                    <table id="table" class="table table-striped table-bordered table-hover" 
-                           data-operate-edit="<?php echo $auth->check('user/user/edit'); ?>" 
-                           data-operate-del="<?php echo $auth->check('user/user/del'); ?>" 
-                           width="100%">
+                    <table id="table" class="table table-bordered table-hover" width="100%">
+
                     </table>
                 </div>
             </div>
@@ -85,6 +78,6 @@
                 </div>
             </div>
         </div>
-        <script src="/anchor/public/assets/js/require<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js" data-main="/anchor/public/assets/js/require-backend<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js?v=<?php echo $site['version']; ?>"></script>
+        <script src="/admin/public/assets/js/require<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js" data-main="/admin/public/assets/js/require-backend<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js?v=<?php echo $site['version']; ?>"></script>
     </body>
 </html>

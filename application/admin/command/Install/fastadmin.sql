@@ -567,3 +567,31 @@ INSERT INTO `fa_version` (`id`, `oldversion`, `newversion`, `packagesize`, `cont
 (1, '1.1.1,2', '1.2.1', '20M', '更新内容', 'https://www.fastadmin.net/download.html', 1, 1520425318, 0, 0, 'normal');
 COMMIT;
 SET FOREIGN_KEY_CHECKS = 1;
+
+-- ----------------------------
+-- Table structure for fa_company
+-- ----------------------------
+DROP TABLE IF EXISTS `fa_company`;
+CREATE TABLE fa_company (
+  `c_id` int (18) NOT NULL AUTO_INCRMENT COMMENT 'ID',
+	`c_name` varchar (300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '公司名称',
+	`c_password` varchar (150) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '公司密码',
+	`c_mobile` varchar (45) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '公司手机',
+	`c_anchor_num` varchar (60) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '主播数量',
+	`c_account_grade` varchar (36) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '账户等级',
+	`c_expired_time` datetime CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '过期时间',
+	`c_business_manager` varchar (54) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '商务经理',
+	`c_real_name` varchar (300) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '真实名字',
+	`c_status` char (12) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '公司状态',
+	`c_corporate` varchar (69) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '合作伙伴',
+	`c_register_address` varchar (360) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '注册地址',
+	`c_business_license` varchar (150) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '营业执照',
+	`c_introduce` text COMMENT '公司介绍',
+	PRIMARY KEY (c_id)
+)ENGINE = InnoDb AUTO_INCREMENT = 1 CHARACTER SET utf8 COLLATE = utf8_general_ci COMMENT = '公司表';
+
+-- ----------------------------
+-- Table structure for fa_gift
+-- ----------------------------
+DROP TABLE IF EXISTS `fa_gift`;
+CREATE TABLE

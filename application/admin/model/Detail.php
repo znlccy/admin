@@ -12,8 +12,16 @@ use think\Model;
 
 class Detail extends Model {
 
+    protected $name = "tb_gift_detail";
+
+    /**
+     * 开启自动写入时间
+     */
     protected $autoWriteTimestamp = 'int';
 
+    /**
+     * 声明
+     */
     protected $createTime = 'createtime';
 
     protected $updateTime = 'updatetime';
