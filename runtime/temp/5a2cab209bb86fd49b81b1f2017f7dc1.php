@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:94:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\index\index.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\header.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\menu.html";i:1523111344;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\control.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:94:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\index\index.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\header.html";i:1524014814;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\menu.html";i:1524013742;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\control.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -53,7 +53,7 @@
                 <a href="/admin/public/" target="_blank"><i class="fa fa-home" style="font-size:14px;"></i></a>
             </li>
 
-            <li class="dropdown notifications-menu hidden-xs">
+            <!--<li class="dropdown notifications-menu hidden-xs">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-bell-o"></i>
                     <span class="label label-warning"></span>
@@ -61,14 +61,14 @@
                 <ul class="dropdown-menu">
                     <li class="header"><?php echo __('Latest news'); ?></li>
                     <li>
-                        <!-- FastAdmin最新更新信息,你可以替换成你自己站点的信息,请注意修改public/assets/js/backend/index.js文件 -->
+                        &lt;!&ndash; FastAdmin最新更新信息,你可以替换成你自己站点的信息,请注意修改public/assets/js/backend/index.js文件 &ndash;&gt;
                         <ul class="menu">
 
                         </ul>
                     </li>
                     <li class="footer"><a href="#" target="_blank"><?php echo __('View more'); ?></a></li>
                 </ul>
-            </li>
+            </li>-->
 
             <li class="hidden-xs">
                 <a href="javascript:;" data-toggle="checkupdate" title="<?php echo __('Check for updates'); ?>">
@@ -123,7 +123,7 @@
                         </p>
                     </li>
                     <!-- Menu Body -->
-                    <li class="user-body">
+                    <!--<li class="user-body">
                         <div class="row">
                             <div class="col-xs-4 text-center">
                                 <a href="https://www.fastadmin.net" target="_blank"><?php echo __('FastAdmin'); ?></a>
@@ -135,7 +135,7 @@
                                 <a href="https://doc.fastadmin.net" target="_blank"><?php echo __('Docs'); ?></a>
                             </div>
                         </div>
-                    </li>
+                    </li>-->
                     <!-- Menu Footer-->
                     <li class="user-footer">
                         <div class="pull-left">
@@ -190,10 +190,10 @@
     <!--如果想始终显示子菜单,则给ul加上show-submenu类即可-->
     <ul class="sidebar-menu">
         <?php echo $menulist; ?>
-        <li class="header" data-rel="external"><?php echo __('Links'); ?></li>
+        <!--<li class="header" data-rel="external"><?php echo __('Links'); ?></li>
         <li data-rel="external"><a href="https://doc.fastadmin.net" target="_blank"><i class="fa fa-list text-red"></i> <span><?php echo __('Docs'); ?></span></a></li>
         <li data-rel="external"><a href="https://forum.fastadmin.net" target="_blank"><i class="fa fa-comment text-yellow"></i> <span><?php echo __('Forum'); ?></span></a></li>
-        <li data-rel="external"><a href="https://jq.qq.com/?_wv=1027&k=487PNBb" target="_blank"><i class="fa fa-qq text-aqua"></i> <span><?php echo __('QQ qun'); ?></span></a></li>
+        <li data-rel="external"><a href="https://jq.qq.com/?_wv=1027&k=487PNBb" target="_blank"><i class="fa fa-qq text-aqua"></i> <span><?php echo __('QQ qun'); ?></span></a></li>-->
     </ul>
 </section>
 <!-- /.sidebar -->

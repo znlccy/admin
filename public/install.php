@@ -36,7 +36,7 @@ function is_really_writable($file)
     return TRUE;
 }
 
-$sitename = "FastAdmin";
+$sitename = "YouDa";
 
 $link = array(
     'qqun'  => "https://jq.qq.com/?_wv=1027&amp;k=487PNBb",
