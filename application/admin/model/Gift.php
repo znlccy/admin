@@ -1,15 +1,33 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/17
- * Time: 11:04
- * Comment: 礼物实体类
- */
+
 namespace app\admin\model;
 
 use think\Model;
 
-class Gift extends Model {
+class Gift extends Model
+{
+    // 表名
+    protected $name = 'gift';
+    
+    // 自动写入时间戳字段
+    protected $autoWriteTimestamp = false;
+
+    // 定义时间戳字段名
+    protected $createTime = false;
+    protected $updateTime = false;
+    
+    // 追加属性
+    protected $append = [
+
+    ];
+    
+
+    
+
+
+
+
+
+
 
 }

@@ -2,7 +2,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
     var Controller = {
         index: function () {
-            //初始化表格参数配置
+            // 初始化表格参数配置
             Table.api.init({
                 extend: {
                     index_url: 'company/company/index',
@@ -14,28 +14,29 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 }
             });
 
-            var table = $("table");
+            var table = $("#table");
 
-            //初始化表格
+            // 初始化表格
             table.bootstrapTable({
-                url: $.fn.bootstrapTable.default.extend.index_url,
-                pk: 'c_id',
-                sortName: 'company.c_id',
+                url: $.fn.bootstrapTable.defaults.extend.index_url,
+                pk: 'id',
+                sortName: 'id',
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'c_id', title: __('Id'), sortable: true},
-                        {field: 'c_name', title: __('Companyname'), operate: 'LIKE'},
-                        {field: 'c_anchor_num', title: __('Anchornum'), operate: 'LIKE'},
-                        {field: 'c_account_grade', title: __('Grade'), operate: 'LIKE'},
-                        {field: 'c_expired_time', title: __('Expired'), operate: 'LIKE'}
-                        {field: 'c_business_manager', title: __('Manager'), operate: 'LIKE'},
-                        {field: 'c_status', title: __('Status'), operate: 'LIKE'}
+                        {field: 'id', title: __('Id')},
+                        {field: 'name', title: __('Name')},
+                        {field: 'anchornum', title: __('Anchornum')},
+                        {field: 'grade', title: __('Grade')},
+                        {field: 'expired', title: __('Expired'), operate:'RANGE', addclass:'datetimerange'},
+                        {field: 'manager', title: __('Manager')},
+                        {field: 'status', title: __('Status'), formatter: Table.api.formatter.status},
+                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
             });
 
-            //为表格绑定事件
+            // 为表格绑定事件
             Table.api.bindevent(table);
         },
         add: function () {

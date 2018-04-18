@@ -1,30 +1,41 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/17
- * Time: 10:59
- * Comment: 时长数据
- */
+
 namespace app\admin\model;
 
 use think\Model;
 
-class Duration extends Model {
+class Duration extends Model
+{
+    // 表名
+    protected $name = 'duration';
+    
+    // 自动写入时间戳字段
+    protected $autoWriteTimestamp = false;
 
-    /**
-     * 自动开启写入时间戳字段
-     */
-    protected $autoWriteTimestamp = 'int';
+    // 定义时间戳字段名
+    protected $createTime = false;
+    protected $updateTime = false;
+    
+    // 追加属性
+    protected $append = [
+        'livetime_text'
+    ];
+    
 
-    /**
-     * 声明创建时间戳字段
-     */
-    protected $createTime = 'createtime';
+    
 
-    /**
-     * 声明更新时间戳字段
-     */
-    protected $updateTime = 'updatetime';
+
+
+    public function getLivetimeTextAttr($value, $data)
+    {
+        $value = $value ? $value : $data['livetime'];
+        return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
+    }
+
+    protected function setLivetimeAttr($value)
+    {
+        return $value && !is_numeric($value) ? strtotime($value) : $value;
+    }
+
 
 }

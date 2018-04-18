@@ -1,31 +1,33 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/17
- * Time: 11:08
- * Comment: 弹幕数据实体类
- */
 
 namespace app\admin\model;
 
 use think\Model;
 
-class Speak extends Model {
+class Speak extends Model
+{
+    // 表名
+    protected $name = 'speak';
+    
+    // 自动写入时间戳字段
+    protected $autoWriteTimestamp = false;
 
-    /**
-     * 开启自动写入时间
-     */
-    protected $autoWriteTimestamp = 'int';
+    // 定义时间戳字段名
+    protected $createTime = false;
+    protected $updateTime = false;
+    
+    // 追加属性
+    protected $append = [
 
-    /**
-     * 声明创建时间戳字段
-     */
-    protected $createTime = 'createtime';
+    ];
+    
 
-    /**
-     * 声明更新时间戳字段
-     */
-    protected $updateTime = 'updatetime';
+    
+
+
+
+
+
+
 
 }

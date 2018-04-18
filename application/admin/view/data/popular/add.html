@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
-</body>
-</html>
+    <div class="form-group">
+        <label for="c-date" class="control-label col-xs-12 col-sm-2">{:__('Date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[date]" type="text" value="{:date('Y-m-d')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-hour" class="control-label col-xs-12 col-sm-2">{:__('Hour')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-hour" class="form-control datetimepicker" data-date-format="HH:mm:ss" data-use-current="true" name="row[hour]" type="text" value="{:date('H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-platform" class="control-label col-xs-12 col-sm-2">{:__('Platform')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-platform" class="form-control" name="row[platform]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-anchor" class="control-label col-xs-12 col-sm-2">{:__('Anchor')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-anchor" class="form-control" name="row[anchor]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-subscribe" class="control-label col-xs-12 col-sm-2">{:__('Subscribe')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-subscribe" class="form-control" name="row[subscribe]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-onlinenum" class="control-label col-xs-12 col-sm-2">{:__('Onlinenum')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-onlinenum" class="form-control" name="row[onlinenum]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

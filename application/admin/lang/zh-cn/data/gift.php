@@ -1,20 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/18
- * Time: 9:38
- * Comment: 礼物中文包
- */
+
 return [
-    //礼物数据
-    'Date'                                           => '日期',
-    'Hour'                                           => '小时',
-    'Platform'                                       => '平台',
-    'Anchor'                                         => '主播',
-    'Send'                                           => '送礼人数',
-    'GiftNum'                                        => '礼物个数',
-    'GiftValue'                                      => '礼物价值',
-    'MaxValue'                                       => '最高礼物',
-    'RealValue'                                      => '实际价格',
+    'Id'  =>  'ID',
+    'Date'  =>  '日期',
+    'Hour'  =>  '小时',
+    'Platform'  =>  '平台',
+    'Anchor'  =>  '主播',
+    'Sendgift'  =>  '送礼人数',
+    'Giftnum'  =>  '礼物个数',
+    'Giftvalue'  =>  '礼物价值',
+    'Maxgift'  =>  '最高礼物',
+    'Realprice'  =>  '实际价格'
 ];
