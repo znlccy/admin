@@ -8,5 +8,6 @@ return [
     'Grade'  =>  '账号等级',
     'Expired'  =>  '过期时间',
     'Manager'  =>  '商务经理',
-    'Status'  =>  '状态'
+    'Status'  =>  '状态',
+    'Cellphone' => '手机号码',
 ];
