@@ -4,8 +4,10 @@ return [
     'Id'  =>  'ID',
     'Date'  =>  '日期',
     'Hour'  =>  '小时',
-    'Platform'  =>  '平台',
-    'Anchor'  =>  '主播',
+    'Pid'  =>  '平台',
+    'Aid'  =>  '主播',
     'Subscribe'  =>  '订阅数',
-    'Onlinenum'  =>  '在线数'
+    'Onlinenum'  =>  '在线数',
+    'Platform.id'  =>  '平台',
+    'User.id'  =>  '主播',
 ];

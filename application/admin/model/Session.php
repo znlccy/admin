@@ -20,10 +20,6 @@ class Session extends Model
     protected $append = [
         'livetime_text'
     ];
-    
-
-    
-
 
 
     public function getLivetimeTextAttr($value, $data)
@@ -38,4 +34,14 @@ class Session extends Model
     }
 
 
+    public function platform()
+    {
+        return $this->belongsTo('Platform', 'pid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
+
+
+    public function user()
+    {
+        return $this->belongsTo('User', 'aid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }

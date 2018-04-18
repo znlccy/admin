@@ -27,8 +27,10 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'id', title: __('Id')},
                         {field: 'begintime', title: __('Begintime'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'endtime', title: __('Endtime'), operate:'RANGE', addclass:'datetimerange'},
-                        {field: 'platform', title: __('Platform')},
-                        {field: 'anchor', title: __('Anchor')},
+                        {field: 'platform.id', title: __('Pid')},
+                        {field: 'user.id', title: __('Aid')},
+                        /*{field: 'pid', title: __('Pid')},
+                        {field: 'aid', title: __('Aid')},*/
                         {field: 'livetime', title: __('Livetime')},
                         {field: 'giftvalue', title: __('Giftvalue'), operate:'BETWEEN'},
                         {field: 'sendgift', title: __('Sendgift')},

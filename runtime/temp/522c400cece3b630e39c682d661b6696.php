@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:102:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\account\add.html";i:1524028171;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:102:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\account\add.html";i:1524038445;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -59,9 +59,9 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="c-belong" class="control-label col-xs-12 col-sm-2"><?php echo __('Belong'); ?>:</label>
+        <label for="c-cid" class="control-label col-xs-12 col-sm-2"><?php echo __('Cid'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-belong" class="form-control" name="row[belong]" type="text" value="">
+            <input id="c-cid" class="form-control" name="row[cid]" type="number">
         </div>
     </div>
     <div class="form-group">
@@ -79,7 +79,7 @@
     <div class="form-group">
         <label for="c-status" class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-status" class="form-control" name="row[status]" type="text">
+            <input id="c-status" class="form-control" name="row[status]" type="text" value="">
         </div>
     </div>
     <div class="form-group layer-footer">

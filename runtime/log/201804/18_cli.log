@@ -1,217 +1,174 @@
-[ 2018-04-18T12:06:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:19:48+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:06:31+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:06:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
-[ 2018-04-18T12:06:31+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:06:31+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:06:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'test' [ RunTime:0.001000s ]
-[ 2018-04-18T12:06:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_test' [ RunTime:0.016001s ]
-[ 2018-04-18T12:06:31+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_test' ORDER BY ORDINAL_POSITION [ RunTime:0.014000s ]
-[ 2018-04-18T12:15:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:19:48+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:19:48+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ 2018-04-18T15:19:48+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:19:48+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:19:48+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'session' [ RunTime:0.001000s ]
+[ 2018-04-18T15:19:48+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_session' [ RunTime:0.001000s ]
+[ 2018-04-18T15:20:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:15:14+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:15:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T12:15:14+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:15:14+08:00 ][ error ] [64]Namespace declaration statement has to be the very first statement in the script[D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\model\Test.php:3]
-[ 2018-04-18T12:15:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ 2018-04-18T15:20:55+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:20:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ 2018-04-18T15:20:55+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'session' [ RunTime:0.001000s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_session' [ RunTime:0.001000s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.000000s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'user' [ RunTime:0.001001s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_user' [ RunTime:0.000000s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_session' ORDER BY ORDINAL_POSITION [ RunTime:0.012000s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_platform' ORDER BY ORDINAL_POSITION [ RunTime:0.010001s ]
+[ 2018-04-18T15:20:55+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_user' ORDER BY ORDINAL_POSITION [ RunTime:0.011001s ]
+[ 2018-04-18T15:32:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:15:31+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:15:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
-[ 2018-04-18T12:15:31+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:15:31+08:00 ][ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\lang/zh-cn.php
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.011000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  `name` = 'test' LIMIT 1 [ RunTime:0.000000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'test' , '测试管理' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1524024931 , 1524024931) [ RunTime:0.056003s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'test/index' LIMIT 1 [ RunTime:0.002000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'test/add' LIMIT 1 [ RunTime:0.002000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'test/edit' LIMIT 1 [ RunTime:0.002000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'test/del' LIMIT 1 [ RunTime:0.002000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `tb_auth_rule` WHERE  `name` = 'test/multi' LIMIT 1 [ RunTime:0.002000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 143 , 'test/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1524024931 , 1524024931) [ RunTime:0.002000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 143 , 'test/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1524024931 , 1524024931) [ RunTime:0.001000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 143 , 'test/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1524024931 , 1524024931) [ RunTime:0.000000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 143 , 'test/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1524024931 , 1524024931) [ RunTime:0.000000s ]
-[ 2018-04-18T12:15:31+08:00 ][ sql ] [ SQL ] INSERT INTO `tb_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 143 , 'test/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1524024931 , 1524024931) [ RunTime:0.000000s ]
-[ 2018-04-18T12:18:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ 2018-04-18T15:32:45+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:32:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ 2018-04-18T15:32:45+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:32:45+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:32:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'duration' [ RunTime:0.001001s ]
+[ 2018-04-18T15:32:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_duration' [ RunTime:0.001000s ]
+[ 2018-04-18T15:35:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:18:04+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:18:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003001s ]
-[ 2018-04-18T12:18:04+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:18:04+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:18:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'test' [ RunTime:0.001001s ]
-[ 2018-04-18T12:18:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_test' [ RunTime:0.000000s ]
-[ 2018-04-18T12:18:17+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:35:04+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:35:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ 2018-04-18T15:35:04+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'duration' [ RunTime:0.001000s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_duration' [ RunTime:0.001000s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.000000s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'user' [ RunTime:0.000000s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_duration' ORDER BY ORDINAL_POSITION [ RunTime:0.014001s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_platform' ORDER BY ORDINAL_POSITION [ RunTime:0.013000s ]
+[ 2018-04-18T15:35:04+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_user' ORDER BY ORDINAL_POSITION [ RunTime:0.014001s ]
+[ 2018-04-18T15:40:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:18:17+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:18:17+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T12:18:17+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:18:20+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:40:44+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:40:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2018-04-18T15:40:44+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:40:44+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:40:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'popular' [ RunTime:0.001000s ]
+[ 2018-04-18T15:40:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_popular' [ RunTime:0.001000s ]
+[ 2018-04-18T15:41:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:18:20+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:18:20+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
-[ 2018-04-18T12:18:20+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:18:20+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:18:20+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.012001s ]
-[ 2018-04-18T12:18:20+08:00 ][ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  (  `name` LIKE 'test%' ) [ RunTime:0.000000s ]
-[ 2018-04-18T12:18:23+08:00 ][ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  `id` IN (143,145,147,146,144,148) [ RunTime:0.003000s ]
-[ 2018-04-18T12:18:24+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 143 [ RunTime:0.054003s ]
-[ 2018-04-18T12:18:24+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 144 [ RunTime:0.075004s ]
-[ 2018-04-18T12:18:24+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 145 [ RunTime:0.072004s ]
-[ 2018-04-18T12:18:24+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 146 [ RunTime:0.077005s ]
-[ 2018-04-18T12:18:24+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 147 [ RunTime:0.068004s ]
-[ 2018-04-18T12:18:24+08:00 ][ sql ] [ SQL ] DELETE FROM `tb_auth_rule`    WHERE  `id` = 148 [ RunTime:0.074004s ]
-[ 2018-04-18T12:43:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:41:27+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:41:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2018-04-18T15:42:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:43:05+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:43:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T12:43:05+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:43:05+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:43:05+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company/company' [ RunTime:0.002000s ]
-[ 2018-04-18T12:43:05+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company/company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:44:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ 2018-04-18T15:42:16+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:42:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ 2018-04-18T15:42:16+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:42:16+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:42:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'popular' [ RunTime:0.001000s ]
+[ 2018-04-18T15:42:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_popular' [ RunTime:0.000000s ]
+[ 2018-04-18T15:42:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:42:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.000000s ]
+[ 2018-04-18T15:42:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:42:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:42:17+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_popular' ORDER BY ORDINAL_POSITION [ RunTime:0.011000s ]
+[ 2018-04-18T15:42:17+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_platform' ORDER BY ORDINAL_POSITION [ RunTime:0.011001s ]
+[ 2018-04-18T15:42:17+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_user' ORDER BY ORDINAL_POSITION [ RunTime:0.012001s ]
+[ 2018-04-18T15:46:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:44:16+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:44:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
-[ 2018-04-18T12:44:16+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:44:16+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:44:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company' [ RunTime:0.002000s ]
-[ 2018-04-18T12:44:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company' [ RunTime:0.000000s ]
-[ 2018-04-18T12:45:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:46:31+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:46:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2018-04-18T15:46:31+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:46:31+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:46:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'speak' [ RunTime:0.002000s ]
+[ 2018-04-18T15:46:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_speak' [ RunTime:0.001000s ]
+[ 2018-04-18T15:46:51+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:45:45+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:45:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T12:45:45+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:45:45+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:45:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:45:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:45:45+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_company' ORDER BY ORDINAL_POSITION [ RunTime:0.010001s ]
-[ 2018-04-18T12:50:48+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:46:51+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:46:51+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003001s ]
+[ 2018-04-18T15:46:51+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'speak' [ RunTime:0.001000s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_speak' [ RunTime:0.001000s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_speak' ORDER BY ORDINAL_POSITION [ RunTime:0.011001s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_platform' ORDER BY ORDINAL_POSITION [ RunTime:0.011000s ]
+[ 2018-04-18T15:46:51+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_user' ORDER BY ORDINAL_POSITION [ RunTime:0.011001s ]
+[ 2018-04-18T15:49:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:50:48+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:50:48+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T12:50:48+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:50:48+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:50:48+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:50:48+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company' [ RunTime:0.000000s ]
-[ 2018-04-18T12:51:35+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:49:45+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:49:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2018-04-18T15:49:46+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:49:46+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:49:46+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'detail' [ RunTime:0.001000s ]
+[ 2018-04-18T15:49:46+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_detail' [ RunTime:0.001000s ]
+[ 2018-04-18T15:51:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:51:35+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:51:35+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
-[ 2018-04-18T12:51:35+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:51:35+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:51:35+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:51:35+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:56:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:51:44+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:51:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ 2018-04-18T15:51:44+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'detail' [ RunTime:0.002000s ]
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_detail' [ RunTime:0.001001s ]
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.000000s ]
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'user' [ RunTime:0.000000s ]
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:51:44+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_detail' ORDER BY ORDINAL_POSITION [ RunTime:0.014001s ]
+[ 2018-04-18T15:51:45+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_platform' ORDER BY ORDINAL_POSITION [ RunTime:0.012001s ]
+[ 2018-04-18T15:51:45+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_user' ORDER BY ORDINAL_POSITION [ RunTime:0.014001s ]
+[ 2018-04-18T15:56:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T12:56:21+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T12:56:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T12:56:21+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T12:56:21+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T12:56:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:56:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company' [ RunTime:0.001000s ]
-[ 2018-04-18T12:56:21+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_company' ORDER BY ORDINAL_POSITION [ RunTime:0.012001s ]
-[ 2018-04-18T13:07:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:56:04+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:56:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ 2018-04-18T15:56:04+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:56:04+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:56:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'gift' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_gift' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.000000s ]
+[ 2018-04-18T15:56:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'user' [ RunTime:0.000000s ]
+[ 2018-04-18T15:56:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T13:07:55+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:07:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
-[ 2018-04-18T13:07:56+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:07:56+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:07:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company' [ RunTime:0.001000s ]
-[ 2018-04-18T13:07:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company' [ RunTime:0.000000s ]
-[ 2018-04-18T13:08:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:56:25+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:56:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ 2018-04-18T15:56:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:56:25+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:56:26+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'gift' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:26+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_gift' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T13:08:38+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:08:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
-[ 2018-04-18T13:08:38+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:08:38+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:08:38+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'companyaccont' [ RunTime:0.001000s ]
-[ 2018-04-18T13:08:38+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_companyaccont' [ RunTime:0.001001s ]
-[ 2018-04-18T13:09:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T15:56:32+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T15:56:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2018-04-18T15:56:32+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'gift' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_gift' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.000000s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'user' [ RunTime:0.000000s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_user' [ RunTime:0.001000s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_gift' ORDER BY ORDINAL_POSITION [ RunTime:0.011001s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_platform' ORDER BY ORDINAL_POSITION [ RunTime:0.011001s ]
+[ 2018-04-18T15:56:32+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_user' ORDER BY ORDINAL_POSITION [ RunTime:0.012000s ]
+[ 2018-04-18T16:00:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T13:09:04+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:09:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
-[ 2018-04-18T13:09:04+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:09:04+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:09:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'accont' [ RunTime:0.001000s ]
-[ 2018-04-18T13:09:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_accont' [ RunTime:0.001000s ]
-[ 2018-04-18T13:09:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ 2018-04-18T16:00:32+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T16:00:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2018-04-18T16:00:32+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T16:00:32+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T16:00:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'account' [ RunTime:0.001000s ]
+[ 2018-04-18T16:00:32+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_account' [ RunTime:0.001000s ]
+[ 2018-04-18T16:00:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
 [ info ] [ LOG ] INIT File
-[ 2018-04-18T13:09:31+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:09:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
-[ 2018-04-18T13:09:31+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:09:31+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:09:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'account' [ RunTime:0.001000s ]
-[ 2018-04-18T13:09:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_account' [ RunTime:0.001000s ]
-[ 2018-04-18T13:09:31+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_account' ORDER BY ORDINAL_POSITION [ RunTime:0.013001s ]
-[ 2018-04-18T13:26:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:26:41+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:26:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
-[ 2018-04-18T13:26:41+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:26:41+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:26:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.001001s ]
-[ 2018-04-18T13:26:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.001000s ]
-[ 2018-04-18T13:26:41+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_platform' ORDER BY ORDINAL_POSITION [ RunTime:0.013001s ]
-[ 2018-04-18T13:39:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:39:43+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:39:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T13:39:43+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:39:43+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:39:43+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'platform' [ RunTime:0.001000s ]
-[ 2018-04-18T13:39:43+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_platform' [ RunTime:0.001000s ]
-[ 2018-04-18T13:39:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:39:56+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:39:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
-[ 2018-04-18T13:39:56+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:39:56+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:39:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'gift' [ RunTime:0.001000s ]
-[ 2018-04-18T13:39:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_gift' [ RunTime:0.001000s ]
-[ 2018-04-18T13:39:56+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_gift' ORDER BY ORDINAL_POSITION [ RunTime:0.013000s ]
-[ 2018-04-18T13:44:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:44:28+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:44:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003001s ]
-[ 2018-04-18T13:44:28+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:44:28+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:44:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'detail' [ RunTime:0.002001s ]
-[ 2018-04-18T13:44:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_detail' [ RunTime:0.001000s ]
-[ 2018-04-18T13:44:28+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_detail' ORDER BY ORDINAL_POSITION [ RunTime:0.011000s ]
-[ 2018-04-18T13:48:00+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:48:00+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:48:00+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T13:48:00+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:48:00+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:48:00+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'speak' [ RunTime:0.001000s ]
-[ 2018-04-18T13:48:00+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_speak' [ RunTime:0.000000s ]
-[ 2018-04-18T13:48:00+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_speak' ORDER BY ORDINAL_POSITION [ RunTime:0.011001s ]
-[ 2018-04-18T13:51:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:51:21+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:51:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
-[ 2018-04-18T13:51:21+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:51:21+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:51:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'popular' [ RunTime:0.001000s ]
-[ 2018-04-18T13:51:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_popular' [ RunTime:0.001000s ]
-[ 2018-04-18T13:51:21+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_popular' ORDER BY ORDINAL_POSITION [ RunTime:0.013001s ]
-[ 2018-04-18T13:54:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:54:16+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:54:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003001s ]
-[ 2018-04-18T13:54:16+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:54:16+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:54:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'duration' [ RunTime:0.001000s ]
-[ 2018-04-18T13:54:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_duration' [ RunTime:0.000000s ]
-[ 2018-04-18T13:54:16+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_duration' ORDER BY ORDINAL_POSITION [ RunTime:0.011000s ]
-[ 2018-04-18T13:59:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
-[ info ] [ LOG ] INIT File
-[ 2018-04-18T13:59:45+08:00 ][ info ] [ CACHE ] INIT File
-[ 2018-04-18T13:59:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
-[ 2018-04-18T13:59:45+08:00 ][ info ] [ DB ] INIT mysql
-[ 2018-04-18T13:59:45+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
-[ 2018-04-18T13:59:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'session' [ RunTime:0.001000s ]
-[ 2018-04-18T13:59:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_session' [ RunTime:0.001000s ]
-[ 2018-04-18T13:59:45+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_session' ORDER BY ORDINAL_POSITION [ RunTime:0.012001s ]
+[ 2018-04-18T16:00:45+08:00 ][ info ] [ CACHE ] INIT File
+[ 2018-04-18T16:00:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006001s ]
+[ 2018-04-18T16:00:45+08:00 ][ info ] [ DB ] INIT mysql
+[ 2018-04-18T16:00:45+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ 2018-04-18T16:00:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'account' [ RunTime:0.001000s ]
+[ 2018-04-18T16:00:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_account' [ RunTime:0.001000s ]
+[ 2018-04-18T16:00:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'company' [ RunTime:0.001000s ]
+[ 2018-04-18T16:00:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tb_company' [ RunTime:0.001000s ]
+[ 2018-04-18T16:00:45+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_account' ORDER BY ORDINAL_POSITION [ RunTime:0.013001s ]
+[ 2018-04-18T16:00:45+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'db_anchor' AND table_name = 'tb_company' ORDER BY ORDINAL_POSITION [ RunTime:0.013001s ]

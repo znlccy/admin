@@ -30,4 +30,8 @@ class Account extends Model
 
 
 
+    public function company()
+    {
+        return $this->belongsTo('Company', 'cid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }

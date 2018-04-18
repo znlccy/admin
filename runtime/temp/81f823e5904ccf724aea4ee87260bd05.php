@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:103:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html";i:1524027381;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:97:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\data\speak\add.html";i:1524037611;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,42 +50,42 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+                                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
     <div class="form-group">
-        <label for="c-name" class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
+        <label for="c-date" class="control-label col-xs-12 col-sm-2"><?php echo __('Date'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-name" class="form-control" name="row[name]" type="text" value="<?php echo $row['name']; ?>">
+            <input id="c-date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[date]" type="text" value="<?php echo date('Y-m-d'); ?>">
         </div>
     </div>
     <div class="form-group">
-        <label for="c-anchornum" class="control-label col-xs-12 col-sm-2"><?php echo __('Anchornum'); ?>:</label>
+        <label for="c-hour" class="control-label col-xs-12 col-sm-2"><?php echo __('Hour'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-anchornum" class="form-control" name="row[anchornum]" type="number" value="<?php echo $row['anchornum']; ?>">
+            <input id="c-hour" class="form-control datetimepicker" data-date-format="HH:mm:ss" data-use-current="true" name="row[hour]" type="text" value="<?php echo date('H:i:s'); ?>">
         </div>
     </div>
     <div class="form-group">
-        <label for="c-grade" class="control-label col-xs-12 col-sm-2"><?php echo __('Grade'); ?>:</label>
+        <label for="c-pid" class="control-label col-xs-12 col-sm-2"><?php echo __('Pid'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-grade" class="form-control" name="row[grade]" type="number" value="<?php echo $row['grade']; ?>">
+            <input id="c-pid" class="form-control" name="row[pid]" type="number">
         </div>
     </div>
     <div class="form-group">
-        <label for="c-expired" class="control-label col-xs-12 col-sm-2"><?php echo __('Expired'); ?>:</label>
+        <label for="c-aid" class="control-label col-xs-12 col-sm-2"><?php echo __('Aid'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-expired" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expired]" type="text" value="<?php echo $row['expired']; ?>">
+            <input id="c-aid" class="form-control" name="row[aid]" type="number">
         </div>
     </div>
     <div class="form-group">
-        <label for="c-manager" class="control-label col-xs-12 col-sm-2"><?php echo __('Manager'); ?>:</label>
+        <label for="c-barragepeople" class="control-label col-xs-12 col-sm-2"><?php echo __('Barragepeople'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-manager" class="form-control" name="row[manager]" type="text" value="<?php echo $row['manager']; ?>">
+            <input id="c-barragepeople" class="form-control" name="row[barragepeople]" type="number" value="0">
         </div>
     </div>
     <div class="form-group">
-        <label for="c-status" class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
+        <label for="c-barragenum" class="control-label col-xs-12 col-sm-2"><?php echo __('Barragenum'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-status" class="form-control" name="row[status]" type="text" value="<?php echo $row['status']; ?>">
+            <input id="c-barragenum" class="form-control" name="row[barragenum]" type="number" value="0">
         </div>
     </div>
     <div class="form-group layer-footer">
