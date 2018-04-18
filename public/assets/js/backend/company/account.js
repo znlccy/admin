@@ -30,9 +30,10 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         /*{field: 'cid', title: __('Cid')},*/
                         {field: 'role', title: __('Role')},
                         {field: 'lastactivetime', title: __('Lastactivetime'), operate:'RANGE', addclass:'datetimerange'},
-                        {field: 'status', title: __('Status'), formatter: Table.api.formatter.status},
-                        /*{field: 'company.name', title: __('Company.name')},
-                        {field: 'company.anchornum', title: __('Company.anchornum')},
+                        {field: 'status', title: __('Status'), formatter: Table.api.formatter.status,searchList: {wait: __('Wait'), normal: __('Normal'), stop: __('Stop')}},
+                        /*{field: 'company.id', title: __('Company.id')},*/
+                        /*{field: 'company.name', title: __('Company.name')},*/
+                        /*{field: 'company.anchornum', title: __('Company.anchornum')},
                         {field: 'company.grade', title: __('Company.grade')},
                         {field: 'company.expired', title: __('Company.expired'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'company.manager', title: __('Company.manager')},

@@ -2,6 +2,7 @@
 
 return [
     'Id'  =>  'ID',
+    'Cellphone' => '手机号码',
     'Name'  =>  '公司名称',
     'Anchornum'  =>  '主播数量',
     'Grade'  =>  '账号等级',

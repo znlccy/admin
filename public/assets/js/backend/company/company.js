@@ -10,6 +10,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     edit_url: 'company/company/edit',
                     del_url: 'company/company/del',
                     multi_url: 'company/company/multi',
+                    detail_url: 'company/company/detail',
                     table: 'company',
                 }
             });
@@ -30,7 +31,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'grade', title: __('Grade')},
                         {field: 'expired', title: __('Expired'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'manager', title: __('Manager')},
-                        {field: 'status', title: __('Status'), formatter: Table.api.formatter.status},
+                        {field: 'status', title: __('Status'), formatter: Table.api.formatter.status,searchList: {wait: __('Wait'), normal: __('Normal'), stop: __('Stop')}},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

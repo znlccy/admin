@@ -36,6 +36,8 @@ return [
     'Loading'                                     => '加载中',
     'More'                                        => '更多',
     'Normal'                                      => '正常',
+    'Wait'                                        => '等待实名',
+    'Stop'                                        => '封停',
     'Hidden'                                      => '隐藏',
     'Submit'                                      => '提交',
     'Reset'                                       => '重置',

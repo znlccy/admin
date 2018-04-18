@@ -46,6 +46,8 @@ return [
     'Yes'                                                   => '是',
     'No'                                                    => '否',
     'Normal'                                                => '正常',
+    'Wait'                                                  => '等待实名',
+    'Stop'                                                  => '封停',
     'Hidden'                                                => '隐藏',
     'Locked'                                                => '锁定',
     'Submit'                                                => '提交',
