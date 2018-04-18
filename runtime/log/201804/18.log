@@ -27895,3 +27895,1813 @@
 [ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
 [ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:43+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.143008s][吞吐率：6.99req/s] [内存消耗：5,955.90kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:43+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048402
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048402 [运行时间：0.048002s][吞吐率：20.83req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048402',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:43+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.132008s][吞吐率：7.58req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.023002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:43+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048403
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048403 [运行时间：0.045002s][吞吐率：22.22req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048403',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:43+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.117006s][吞吐率：8.55req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:43+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048403
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048403 [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048403',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:44+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.193011s][吞吐率：5.18req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.023002s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:44+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048404
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048404 [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048404',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:44+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.116006s][吞吐率：8.62req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:44+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048404
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048404 [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048404',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:45+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.138008s][吞吐率：7.25req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:45+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048404
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048404 [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048404',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:45+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.112007s][吞吐率：8.93req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:45+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048405
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048405 [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048405',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:49+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.147008s][吞吐率：6.80req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:49+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048409
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048409 [运行时间：0.046002s][吞吐率：21.74req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048409',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:50+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.118007s][吞吐率：8.47req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:50+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048410
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048410 [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048410',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:50+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.125007s][吞吐率：8.00req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:50+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048410
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048410 [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048410',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:51+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.117007s][吞吐率：8.55req/s] [内存消耗：5,724.30kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:51+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048410
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048410 [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048410',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:53+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/11?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1 [运行时间：0.143008s][吞吐率：6.99req/s] [内存消耗：5,724.16kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:53+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048413
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048413 [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：4,281.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048413',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:56+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/9?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/9?dialog=1 [运行时间：0.132007s][吞吐率：7.58req/s] [内存消耗：5,724.01kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '9',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 9 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:56+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048416
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048416 [运行时间：0.046002s][吞吐率：21.74req/s] [内存消耗：4,282.14kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/9?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048416',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:46:59+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/edit/ids/7?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/company/edit/ids/7?dialog=1 [运行时间：0.144008s][吞吐率：6.94req/s] [内存消耗：5,723.95kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '7',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/company/edit' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:46:59+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048419
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.company&v=1524048419 [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：4,282.14kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company/edit/ids/7?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.company',
+  'v' => '1524048419',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:47:05+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/company/index?sort=id&order=desc&offset=10&limit=10&filter=%7B%7D&op=%7B%7D&_=1524046648817
+[ info ] localhost/admin/public/index.php/admin/company/company/index?sort=id&order=desc&offset=10&limit=10&filter=%7B%7D&op=%7B%7D&_=1524046648817 [运行时间：0.140008s][吞吐率：7.14req/s] [内存消耗：5,817.52kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.company',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/company?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '10',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1524046648817',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/company.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_company` ORDER BY `id`  desc LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_company` ORDER BY `id`  desc LIMIT 10,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:47:08+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/account?addtabs=1
+[ info ] localhost/admin/public/index.php/admin/company/account?addtabs=1 [运行时间：0.114007s][吞吐率：8.77req/s] [内存消耗：5,711.08kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.account',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/account?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/account.php
+[ info ] [ RUN ] app\admin\controller\company\Account->index[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\company\Account.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\account\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'company/account' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:47:08+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.account&v=1524048428
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.account&v=1524048428 [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：4,283.09kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/account?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.account',
+  'v' => '1524048428',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/account.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:47:08+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/account/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1524048428329
+[ info ] localhost/admin/public/index.php/admin/company/account/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1524048428329 [运行时间：0.141008s][吞吐率：7.09req/s] [内存消耗：6,049.99kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.account',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/account?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1524048428329',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/account.php
+[ info ] [ RUN ] app\admin\controller\company\Account->index[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\company\Account.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_account` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_company` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_account` `account` LEFT JOIN `tb_company` `company` ON `account`.`cid`=`company`.`id` ORDER BY `account`.`id`  desc LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `account`.`id`,`account`.`account`,`account`.`cid`,`account`.`role`,`account`.`lastactivetime`,`account`.`status`,company.id AS company__id,company.name AS company__name,company.anchornum AS company__anchornum,company.grade AS company__grade,company.expired AS company__expired,company.manager AS company__manager,company.status AS company__status,company.cellphone AS company__cellphone,company.introduce AS company__introduce,company.link AS company__link,company.password AS company__password FROM `tb_account` `account` LEFT JOIN `tb_company` `company` ON `account`.`cid`=`company`.`id` ORDER BY `account`.`id`  desc LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:47:09+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/company/account/edit/ids/7?dialog=1
+[ info ] localhost/admin/public/index.php/admin/company/account/edit/ids/7?dialog=1 [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：5,727.14kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'company.account',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/account?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '7',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/account.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\account\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=db_anchor;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_account` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_account` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-04-18T18:47:09+08:00 ] 0.0.0.0 GET /admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.account&v=1524048429
+[ info ] localhost/admin/public/index.php/admin/ajax/lang?callback=define&controllername=company.account&v=1524048429 [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：4,282.95kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003001s ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/admin/public/index.php/admin/company/account/edit/ids/7?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=8818566144; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1523852552; PHPSESSID=57q8d4v7u5a80i1b8qua0un043; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'company.account',
+  'v' => '1524048429',
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin/lang/zh-cn/company/account.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:103:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html";i:1524046642;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:103:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\public/../application/admin\view\company\company\edit.html";i:1524048390;s:87:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\layout\default.html";i:1523111344;s:84:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\meta.html";i:1523111344;s:86:"D:\PHP-Environment\Apache2.4.29\htdocs\admin\application\admin\view\common\script.html";i:1523111344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group layer-footer">
                     <label class="control-label col-xs-12 col-sm-2"></label>
                     <div class="col-xs-12 col-sm-8">
