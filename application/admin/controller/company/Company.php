@@ -38,4 +38,17 @@ class Company extends Backend
         return ['wait' => __('Wait'), 'normal' => __('Normal'), 'stop' => __('Stop')];
     }
 
+    /**
+     * 查看详情
+     */
+    public function detail($ids)
+    {
+        $row = $this->model->get(['id' => $ids]);
+        if (!$row)
+            $this->error(__('No Results were found'));
+        $this->view->assign("row", $row->toArray());
+        return $this->view->fetch();
+    }
+
+
 }

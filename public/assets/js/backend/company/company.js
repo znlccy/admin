@@ -32,7 +32,15 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'expired', title: __('Expired'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'manager', title: __('Manager')},
                         {field: 'status', title: __('Status'), formatter: Table.api.formatter.status,searchList: {wait: __('Wait'), normal: __('Normal'), stop: __('Stop')}},
-                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate,
+                            buttons: [{
+                                name: 'detail',
+                                text: __('Detail'),
+                                icon: 'fa fa-list',
+                                classname: 'btn btn-info btn-xs btn-detail btn-dialog',
+                                url: 'company/company/detail'
+                            }],
+                            formatter: Table.api.formatter.operate}
                     ]
                 ]
             });

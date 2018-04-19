@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => '游达直播数据统计后台',
+  'name' => 'FastAdmin',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',
