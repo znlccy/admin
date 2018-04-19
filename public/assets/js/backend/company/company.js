@@ -33,7 +33,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'expired', title: __('Expired'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'manager', title: __('Manager')},
                         {field: 'introduce', title: __('Introduce'), visible: false},
-                        {field: 'link', title: __('Link')},
+                        {field: 'link', title: __('Link'), visible: false},
                         {field: 'status', title: __('Status'), formatter: Table.api.formatter.status,searchList: {wait: __('Wait'), normal: __('Normal'), stop: __('Stop')}},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate,
                             buttons: [{

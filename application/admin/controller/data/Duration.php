@@ -67,4 +67,41 @@ class Duration extends Backend
         }
         return $this->view->fetch();
     }
+
+    /**
+     * 计算直播时间
+     */
+    public function liveDuration() {
+        
+    }
+
+    /**
+     * 添加方法
+     */
+    public function add()
+    {
+    }
+
+    /**
+     * 编辑方法
+     */
+    public function edit($ids = NULL)
+    {
+    }
+
+    /**
+     * 删除方法
+     */
+    public function del($ids = "")
+    {
+    }
+
+    /**
+     * 导入方法
+     */
+    protected function import()
+    {
+
+    }
+
 }

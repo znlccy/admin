@@ -67,4 +67,15 @@ class Session extends Backend
         }
         return $this->view->fetch();
     }
+
+    /**
+     * 计算直播时长
+     */
+    public function caculateLiveTime() {
+        $row = $this->model->get(['id' => '1']);
+        if ($row == null) {
+            $this->error();
+        }
+        echo ($row->endtime) . ($row->begintime);
+    }
 }

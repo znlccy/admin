@@ -67,4 +67,33 @@ class Popular extends Backend
         }
         return $this->view->fetch();
     }
+
+    /**
+     * 添加方法
+     */
+    public function add()
+    {
+    }
+
+    /**
+     * 编辑方法
+     */
+    public function edit($ids = NULL)
+    {
+    }
+
+    /**
+     * 删除方法
+     */
+    public function del($ids = "")
+    {
+    }
+
+    /**
+     * 导入方法
+     */
+    protected function import()
+    {
+    }
+
 }

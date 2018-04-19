@@ -3,10 +3,9 @@
 namespace app\admin\controller\data;
 
 use app\common\controller\Backend;
+use app\admin\model\Gift as GiftConfig;
 
 /**
- * 
- *
  * @icon fa fa-circle-o
  */
 class Platform extends Backend
@@ -29,6 +28,19 @@ class Platform extends Backend
      * 因此在当前控制器中可不用编写增删改查的代码,除非需要自己控制这部分逻辑
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
-    
 
+    /**
+     * 获取礼物配置
+     */
+    public function config($ids) {
+        $row = $this->model->get(['id' => $ids]);
+        if (!$row)
+            $this->error(__('No Results were found'));
+        $this->view->assign("row", $row->toArray());
+        return $this->view->fetch();
+    }
+
+    public function info() {
+        echo "打印信息";
+    }
 }
