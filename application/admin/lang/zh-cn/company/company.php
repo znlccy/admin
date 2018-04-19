@@ -16,5 +16,11 @@ return [
     'Batch delete'      => '批量删除',
     'Introduce'         => '公司介绍',
     'Link'              => '联系方式',
+    'Basic info'        => '基础信息',
+    'Introduce'         => '公司介绍',
+    'BasicInfo'         => '基础信息',
+    'GroupManager'      => '分组管理',
+    'AnchorManager'     => '主播管理',
+    'TraceRecord'       => '跟进记录',
 ];
 

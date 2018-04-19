@@ -13,113 +13,199 @@
     <div class="panel-heading">
         {:build_heading(null, false)}
         <ul class="nav nav-tabs">
-            <li class="active"><a href="">基础信息</a></li>
-            <li><a href="">分组管理</a></li>
-            <li><a href="">主播管理</a></li>
-            <li><a href="">跟进记录</a></li>
+            {foreach $siteList as $index=>$vo}
+            <li class="{$vo.active?'active':''}"><a href="#{$vo.name}" data-toggle="tab">{:__($vo.title)}</a></li>
+            {/foreach}
         </ul>
     </div>
 
     <div class="panel-body">
         <div id="myTabContent" class="tab-content">
-            <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+            {foreach $siteList as $index=>$vo}
+            <div class="tab-pane fade {$vo.active ? 'active in' : ''}" id="{$vo.name}">
+                <div class="widget-body no-padding">
+                    <form id="{$vo.name}-form" class="edit-form form-horizontal" role="form" data-toggle="validator" method="POST" action="{:url('general.config/edit')}">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th width="15%">{:__('Title')}</th>
+                                <th width="70%">{:__('Value')}</th>
+                                <th width="15%">{:__('Name')}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $vo.list as $item}
+                            <tr>
+                                <td>{$item.title}</td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-xs-12">
+                                            {switch $item.type}
+                                            {case string}
+                                            <input type="text" name="row[{$item.name}]" value="{$item.value}" class="form-control" data-rule="{$item.rule}" data-tip="{$item.tip}" {$item.extend} />
+                                            {/case}
+                                            {case text}
+                                            <textarea name="row[{$item.name}]" class="form-control" data-rule="{$item.rule}" rows="5" data-tip="{$item.tip}" {$item.extend}>{$item.value}</textarea>
+                                            {/case}
+                                            {case editor}
+                                            <textarea name="row[{$item.name}]" id="editor-{$item.name}" class="form-control editor" data-rule="{$item.rule}" rows="5" data-tip="{$item.tip}" {$item.extend}>{$item.value}</textarea>
+                                            {/case}
+                                            {case array}
+                                            <dl class="fieldlist" data-name="row[{$item.name}]">
+                                                <dd>
+                                                    <ins>{:__('Array key')}</ins>
+                                                    <ins>{:__('Array value')}</ins>
+                                                </dd>
+                                                <dd><a href="javascript:;" class="btn btn-sm btn-success btn-append"><i class="fa fa-plus"></i> {:__('Append')}</a></dd>
+                                                <textarea name="row[{$item.name}]" class="form-control hide" cols="30" rows="5">{$item.value}</textarea>
+                                            </dl>
+                                            {/case}
+                                            {case datetime}
+                                            <input type="text" name="row[{$item.name}]" value="{$item.value}" class="form-control datetimepicker" data-tip="{$item.tip}" data-rule="{$item.rule}" {$item.extend} />
+                                            {/case}
+                                            {case number}
+                                            <input type="number" name="row[{$item.name}]" value="{$item.value}" class="form-control" data-tip="{$item.tip}" data-rule="{$item.rule}" {$item.extend} />
+                                            {/case}
+                                            {case checkbox}
+                                            {foreach name="item.content" item="vo"}
+                                            <label for="row[{$item.name}][]-{$key}"><input id="row[{$item.name}][]-{$key}" name="row[{$item.name}][]" type="checkbox" value="{$key}" data-tip="{$item.tip}" {in name="key" value="$item.value"}checked{/in} /> {$vo}</label>
+                                            {/foreach}
+                                            {/case}
+                                            {case radio}
+                                            {foreach name="item.content" item="vo"}
+                                            <label for="row[{$item.name}]-{$key}"><input id="row[{$item.name}]-{$key}" name="row[{$item.name}]" type="radio" value="{$key}" data-tip="{$item.tip}" {in name="key" value="$item.value"}checked{/in} /> {$vo}</label>
+                                            {/foreach}
+                                            {/case}
+                                            {case value="select" break="0"}{/case}
+                                            {case value="selects"}
+                                            <select name="row[{$item.name}]{$item.type=='selects'?'[]':''}" class="form-control selectpicker" data-tip="{$item.tip}" {$item.type=='selects'?'multiple':''}>
+                                                {foreach name="item.content" item="vo"}
+                                                <option value="{$key}" {in name="key" value="$item.value"}selected{/in}>{$vo}</option>
+                                                {/foreach}
+                                            </select>
+                                            {/case}
+                                            {case value="image" break="0"}{/case}
+                                            {case value="images"}
+                                            <div class="form-inline">
+                                                <input id="c-{$item.name}" class="form-control" size="50" name="row[{$item.name}]" type="text" value="{$item.value}" data-tip="{$item.tip}">
+                                                <span><button type="button" id="plupload-{$item.name}" class="btn btn-danger plupload" data-input-id="c-{$item.name}" data-mimetype="image/*" data-multiple="{$item.type=='image'?'false':'true'}" data-preview-id="p-{$item.name}"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                                                <span><button type="button" id="fachoose-{$item.name}" class="btn btn-primary fachoose" data-input-id="c-{$item.name}" data-mimetype="image/*" data-multiple="{$item.type=='image'?'false':'true'}"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                                                <ul class="row list-inline plupload-preview" id="p-{$item.name}"></ul>
+                                            </div>
+                                            {/case}
+                                            {case value="file" break="0"}{/case}
+                                            {case value="files"}
+                                            <div class="form-inline">
+                                                <input id="c-{$item.name}" class="form-control" size="50" name="row[{$item.name}]" type="text" value="{$item.value}" data-tip="{$item.tip}">
+                                                <span><button type="button" id="plupload-{$item.name}" class="btn btn-danger plupload" data-input-id="c-{$item.name}" data-multiple="{$item.type=='file'?'false':'true'}"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                                                <span><button type="button" id="fachoose-{$item.name}" class="btn btn-primary fachoose" data-input-id="c-{$item.name}" data-multiple="{$item.type=='file'?'false':'true'}"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                                            </div>
+                                            {/case}
+                                            {case bool}
+                                            <label for="row[{$item.name}]-yes"><input id="row[{$item.name}]-yes" name="row[{$item.name}]" type="radio" value="1" {$item.value?'checked':''} data-tip="{$item.tip}" /> {:__('Yes')}</label>
+                                            <label for="row[{$item.name}]-no"><input id="row[{$item.name}]-no" name="row[{$item.name}]" type="radio" value="0" {$item.value?'':'checked'} data-tip="{$item.tip}" /> {:__('No')}</label>
+                                            {/case}
+                                            {/switch}
+                                        </div>
+                                        <div class="col-sm-4"></div>
+                                    </div>
 
-                <div class="col-xs-12 col-sm-6">
+                                </td>
+                                <td>{php}echo "{\$site.". $item['name'] . "}";{/php}</td>
+                            </tr>
+                            {/foreach}
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button type="submit" class="btn btn-success btn-embossed">{:__('OK')}</button>
+                                    <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            {/foreach}
+            <div class="tab-pane fade" id="addcfg">
+                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="{:url('general.config/add')}">
                     <div class="form-group">
-                        <label for="c-cellphone" class="control-label col-xs-12 col-sm-4">{:__('Cellphone')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <input id="c-cellphone" disabled="disabled" class="form-control" name="row[cellphone]" type="text" value="{$row.cellphone}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-name" class="control-label col-xs-12 col-sm-4">{:__('Name')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <input id="c-name" disabled="disabled" class="form-control" name="row[name]" type="text" value="{$row.name}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-introduce" class="control-label col-xs-12 col-sm-4">{:__('Introduce')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <textarea id="c-introduce" placeholder="请输入内容" rows="4" cols="26" name="row[introduce]" value="{$row.introduce}"></textarea>
-                            <!--<input id="c-introduce" class="form-control" name="row[introduce]" type="textarea" value="{$row.introduce}">-->
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-link" class="control-label col-xs-12 col-sm-4">{:__('Link')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <input id="c-link" placeholder="请输入名称" class="form-control" name="row[link]" type="text" value="{$row.link}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-manager" class="control-label col-xs-12 col-sm-4">{:__('Manager')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <!--<input id="c-manager" class="form-control" name="row[manager]" type="text" value="{$row.manager}">-->
-                            <select id="c-manager" class="form-control" name="row[manager]" type="text" value="{$row.manager}">
-                                <option selected="selected">无</option>
-                                <option value="">韩梅梅</option>
-                                <option value="">李涛</option>
+                        <label for="type" class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <select name="row[type]" class="form-control selectpicker">
+                                {foreach name="typeList" item="vo"}
+                                <option value="{$key}" {in name="key" value="string"}selected{/in}>{$vo}</option>
+                                {/foreach}
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="c-password" class="control-label col-xs-12 col-sm-4">{:__('修改密码')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <input id="c-password" placeholder="请输入密码" class="form-control" name="row[password]" type="password" value="{$row.password}">
-                        </div>
-                    </div>
-                    <!--<div class="form-group">
-                        <label for="c-anchornum" class="control-label col-xs-12 col-sm-4">{:__('Anchornum')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <input id="c-anchornum" class="form-control" name="row[anchornum]" type="number" value="{$row.anchornum}">
-                        </div>
-                    </div>-->
-
-                </div>
-
-                <div class="col-xs-12 col-sm-6">
-                    <div class="form-group">
-                        <label for="c-grade" class="control-label col-xs-12 col-sm-4">{:__('Grade')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <!--<input id="c-grade" class="form-control" name="row[grade]" type="number" value="{$row.grade}">-->
-                            <select id="c-grade" class="form-control" name="row[grade]" type="number" value="{$row.grade}">
-                                <option selected="selected">免费版</option>
-                                <option value="">会员版</option>
-                                <option value="">高级会员版</option>
-                                <option value="">定制版</option>
+                        <label for="group" class="control-label col-xs-12 col-sm-2">{:__('Group')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <select name="row[group]" class="form-control selectpicker">
+                                {foreach name="groupList" item="vo"}
+                                <option value="{$key}" {in name="key" value="basic"}selected{/in}>{$vo}</option>
+                                {/foreach}
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="c-expired" class="control-label col-xs-12 col-sm-4">{:__('Expired')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <input id="c-expired" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expired]" type="text" value="{$row.expired}">
+                        <label for="name" class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <input type="text" class="form-control" id="name" name="row[name]" value="" data-rule="required; length(3~30); remote(general/config/check)" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="c-manager" class="control-label col-xs-12 col-sm-4">{:__('Manager')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <input id="c-manager" class="form-control" name="row[manager]" type="text" value="{$row.manager}">
+                        <label for="title" class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <input type="text" class="form-control" id="title" name="row[title]" value="" data-rule="required" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="c-status" class="control-label col-xs-12 col-sm-4">{:__('账户状态')}:</label>
-                        <div class="col-xs-12 col-sm-7">
-                            <!--<input id="c-status" class="form-control" name="row[status]" type="text" value="{$row.status}">-->
-                            <select id="c-status" class="form-control" name="row[status]" type="text" value="{$row.status}">
-                                <option selected="selected">正常</option>
-                                <option value="">封禁</option>
-                            </select>
+                        <label for="value" class="control-label col-xs-12 col-sm-2">{:__('Value')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <input type="text" class="form-control" id="value" name="row[value]" value="" data-rule="" />
                         </div>
                     </div>
-                </div>
-                <div class="form-group layer-footer">
-                    <label class="control-label col-xs-12 col-sm-2"></label>
-                    <div class="col-xs-12 col-sm-8">
-                        <button type="submit" class="btn btn-success btn-embossed" style="width: 120px">{:__('保存')}</button>
-                        <!--<button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>-->
+                    <div class="form-group hide" id="add-content-container">
+                        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('Content')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <textarea name="row[content]" id="content" cols="30" rows="5" class="form-control" data-rule="required">value1|title1
+value2|title2</textarea>
+                        </div>
                     </div>
-                </div>
-            </form>
+                    <div class="form-group">
+                        <label for="tip" class="control-label col-xs-12 col-sm-2">{:__('Tip')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <input type="text" class="form-control" id="tip" name="row[tip]" value="" data-rule="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rule" class="control-label col-xs-12 col-sm-2">{:__('Rule')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <input type="text" class="form-control" id="rule" name="row[rule]" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="extend" class="control-label col-xs-12 col-sm-2">{:__('Extend')}:</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <textarea name="row[extend]" id="extend" cols="30" rows="5" class="form-control" data-rule=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-2"></label>
+                        <div class="col-xs-12 col-sm-4">
+                            <button type="submit" class="btn btn-success btn-embossed">{:__('OK')}</button>
+                            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
         </div>
     </div>
 </div>

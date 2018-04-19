@@ -28,6 +28,13 @@ return array (
     'user' => 'User',
     'example' => 'Example',
   ),
+'companygroup' =>
+    array(
+        'basic'           => 'BasicInfo',
+        'group'           => 'GroupManager',
+        'anchor'          => 'AnchorManager',
+        'trace'           => 'TraceRecord',
+    ),
   'mail_type' => '1',
   'mail_smtp_host' => 'smtp.qq.com',
   'mail_smtp_port' => '465',

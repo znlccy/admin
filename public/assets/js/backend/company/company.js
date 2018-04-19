@@ -28,9 +28,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'id', title: __('Id')},
                         {field: 'name', title: __('Name')},
                         {field: 'anchornum', title: __('Anchornum')},
+                        {field: 'cellphone', title: __('Cellphone'), visible: false},
                         {field: 'grade', title: __('Grade')},
                         {field: 'expired', title: __('Expired'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'manager', title: __('Manager')},
+                        {field: 'introduce', title: __('Introduce'), visible: false},
+                        {field: 'link', title: __('Link')},
                         {field: 'status', title: __('Status'), formatter: Table.api.formatter.status,searchList: {wait: __('Wait'), normal: __('Normal'), stop: __('Stop')}},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate,
                             buttons: [{
@@ -47,6 +50,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
             // 为表格绑定事件
             Table.api.bindevent(table);
+
+            //为表格设置默认列
+            Table.columnDefaults.align('id','operate');
         },
         add: function () {
             Controller.api.bindevent();
