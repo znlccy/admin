@@ -29,7 +29,7 @@
                             <thead>
                             <tr>
                                 <th width="15%">{:__('Title')}</th>
-                                <th width="70%">{:__('Value')}</th>
+                                <th width="70%">{:__('变量值')}</th>
                                 <th width="15%">{:__('Name')}</th>
                             </tr>
                             </thead>
@@ -131,7 +131,7 @@
             </div>
             {/foreach}
             <div class="tab-pane fade" id="addcfg">
-                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="{:url('general.config/add')}">
+                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="{:url('company.company/add')}">
                     <div class="form-group">
                         <label for="type" class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
                         <div class="col-xs-12 col-sm-4">
@@ -202,7 +202,6 @@ value2|title2</textarea>
                             <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
                         </div>
                     </div>
-
                 </form>
 
             </div>
