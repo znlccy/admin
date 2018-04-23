@@ -2,8 +2,10 @@
 
 namespace app\admin\controller\data;
 
+use app\admin\model\GiftModel;
 use app\common\controller\Backend;
-use app\admin\model\Gift as GiftConfig;
+use app\admin\model\GiftModel as GiftConfig;
+use think\Db;
 
 /**
  * @icon fa fa-circle-o
@@ -33,13 +35,23 @@ class Platform extends Backend
      * 获取礼物配置
      */
     public function config($ids) {
-        $row = $this->model->get(['id' => $ids]);
+        $row = GiftModel::get($ids);
         if (!$row)
             $this->error(__('No Results were found'));
         $this->view->assign("row", $row->toArray());
         return $this->view->fetch();
     }
 
+    /**
+     * 创建礼物配置
+     */
+    public function create() {
+        echo "创建礼物配置";
+    }
+
+    /**
+     * 提示信息
+     */
     public function info() {
         echo "打印信息";
     }
