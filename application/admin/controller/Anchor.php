@@ -1,27 +1,29 @@
 <?php
 
-namespace app\admin\controller\data;
+namespace app\admin\controller;
 
 use app\common\controller\Backend;
 
 /**
  * 
  *
- * @icon fa fa-circle-o
+ * @icon fa fa-anchor
  */
-class Duration extends Backend
+class Anchor extends Backend
 {
     
     /**
-     * Duration模型对象
+     * Anchor模型对象
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = model('Duration');
-
+        $this->model = model('Anchor');
+        $this->view->assign("livestatusList", $this->model->getLivestatusList());
+        $this->view->assign("signList", $this->model->getSignList());
+        $this->view->assign("statusList", $this->model->getStatusList());
     }
     
     /**
@@ -29,6 +31,11 @@ class Duration extends Backend
      * 因此在当前控制器中可不用编写增删改查的代码,除非需要自己控制这部分逻辑
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
-    
 
+    /**
+     * 主播详细
+     */
+    public function detail() {
+        return $this->view->fetch();
+    }
 }

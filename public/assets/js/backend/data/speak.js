@@ -24,7 +24,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: __('Id')},
+                        {field: 'id', title: __('Id'), visible: false},
                         {field: 'date', title: __('Date'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'hour', title: __('Hour')},
                         {field: 'platform.id', title: __('Platform.id')},

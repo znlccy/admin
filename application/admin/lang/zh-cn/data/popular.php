@@ -7,7 +7,5 @@ return [
     'Pid'  =>  '平台',
     'Aid'  =>  '主播',
     'Subscribe'  =>  '订阅数',
-    'Onlinenum'  =>  '在线数',
-    'Platform.id'  =>  '平台',
-    'User.id'  =>  '主播',
+    'Onlinenum'  =>  '在线数'
 ];

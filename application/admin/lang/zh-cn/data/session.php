@@ -11,7 +11,5 @@ return [
     'Sendgift'  =>  '送礼人数',
     'Barrage'  =>  '弹幕数',
     'Barragepeople'  =>  '弹幕人数',
-    'Subscribe'  =>  '订阅量',
-    'Platform.id'  =>  '平台',
-    'User.id'  =>  '主播',
+    'Subscribe'  =>  '订阅量'
 ];

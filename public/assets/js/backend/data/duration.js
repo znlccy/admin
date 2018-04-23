@@ -24,12 +24,10 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: __('Id')},
+                        {field: 'id', title: __('Id'), visible: false},
                         {field: 'date', title: __('Date'), operate:'RANGE', addclass:'datetimerange'},
-                        {field: 'platform.id', title: __('Platform.id')},
-                        {field: 'user.id', title: __('User.id')},
-                        /*{field: 'pid', title: __('Pid')},
-                        {field: 'aid', title: __('Aid')},*/
+                        {field: 'pid', title: __('Pid')},
+                        {field: 'aid', title: __('Aid')},
                         {field: 'livetime', title: __('Livetime')},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]

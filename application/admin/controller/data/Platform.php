@@ -50,9 +50,16 @@ class Platform extends Backend
     }
 
     /**
-     * 提示信息
+     * 修改礼物配置
      */
-    public function info() {
-        echo "打印信息";
+    public function editGift() {
+        echo "修改礼物配置";
+    }
+
+    /**
+     * 删除礼物配置
+     */
+    public function delGift() {
+
     }
 }
