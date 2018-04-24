@@ -32,7 +32,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'liveurl', title: __('Liveurl'), formatter: Table.api.formatter.url},
                         {field: 'livestatus', title: __('Livestatus'), visible:false, searchList: {"normal":__('normal'),"stop":__('stop')}},
                         {field: 'livestatus_text', title: __('Livestatus'), operate:false},
-                        {field: 'sign', title: __('Sign'), visible:false, searchList: {"signed":__('signed'),"nosign":__('nosign')}},
+                        {field: 'sign', title: __('Sign'), visible:false, searchList: {"signed":__('已签约'),"nosign":__('未签约')}},
                         {field: 'sign_text', title: __('Sign'), operate:false},
                         {field: 'account', title: __('Account')},
                         {field: 'status', title: __('Status'), visible:false, searchList: {"normal":__('normal'),"stop":__('stop')}},

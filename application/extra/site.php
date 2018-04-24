@@ -35,6 +35,13 @@ return array (
         'anchor'          => 'AnchorManager',
         'trace'           => 'TraceRecord',
     ),
+  'anchorgroup' =>
+    array(
+         'basic'          => 'BasicInfo',
+         'account'        => 'AccountSetting',
+         'trace'          => 'TraceRecord',
+         'brush'          => 'BrushRecord',
+    ),
   'mail_type' => '1',
   'mail_smtp_host' => 'smtp.qq.com',
   'mail_smtp_port' => '465',

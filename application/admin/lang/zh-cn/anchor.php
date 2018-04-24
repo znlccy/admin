@@ -11,4 +11,10 @@ return [
     'Account'  =>  '账号',
     'Status'  =>  '状态',
     'Detail'    => '详情',
+    'Signed'    => '已签约',
+    'Nosign'    => '未签约',
+    'BasicInfo' => '基础信息',
+    'AccountSetting' => '账号设置',
+    'TraceRecord' => '跟进记录',
+    'BrushRecord' => '刷礼记录',
 ];
