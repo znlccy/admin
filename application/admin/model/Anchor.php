@@ -170,4 +170,24 @@ class Anchor extends Model
         return isset($list[$value]) ? $list[$value] : '';
     }
 
+    /*获取基本信息*/
+    public static function basicInfo() {
+
+    }
+
+    /*获取账号设置*/
+    public static function accountSetting() {
+
+    }
+
+    /*获取跟进记录*/
+    public static function traceRecord() {
+
+    }
+
+    /*获取刷礼记录*/
+    public static function brushRecord() {
+
+    }
+
 }

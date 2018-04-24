@@ -127,4 +127,32 @@ class Company extends Model
         }
         return $content;
     }
+
+    /**
+     * 获取基础信息
+     */
+    public static function basicInfo() {
+
+    }
+
+    /**
+     * 获取分组管理
+     */
+    public static function groupManager() {
+
+    }
+
+    /**
+     * 获取主播管理
+     */
+    public static function anchorManager() {
+
+    }
+
+    /**
+     * 获取跟进记录
+     */
+    public static function traceRecord() {
+
+    }
 }

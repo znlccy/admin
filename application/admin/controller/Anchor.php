@@ -4,6 +4,7 @@ namespace app\admin\controller;
 
 use app\common\controller\Backend;
 use app\admin\model\Anchor as ConfigModel;
+use app\common\model\Config;
 
 /**
  * 
@@ -70,6 +71,18 @@ class Anchor extends Backend
         $this->view->assign('siteList', $siteList);
         $this->view->assign('typeList', ConfigModel::getTypeList());
         $this->view->assign('groupList', ConfigModel::getGroupList());
+
+        /*基本信息*/
+        $this->view->assign("basic", ConfigModel::basicInfo());
+
+        /*账号设置*/
+        $this->view->assign("account", ConfigModel::accountSetting());
+
+        /*跟进记录*/
+        $this->view->assign("trace", ConfigModel::traceRecord());
+
+        /*刷礼记录*/
+        $this->view->assign("brush", ConfigModel::brushRecord());
 
         $row = $this->model->get(['id' => $ids]);
         if (!$row)

@@ -78,6 +78,18 @@ class Company extends Backend
         $this->view->assign('typeList', ConfigModel::getTypeList());
         $this->view->assign('groupList', ConfigModel::getGroupList());
 
+        /*基础信息*/
+        $this->view->assign('basicInfo', ConfigModel::basicInfo());
+
+        /*分组管理*/
+        $this->view->assign('groupManager', ConfigModel::groupManager());
+
+        /*主播管理*/
+        $this->view->assign('anchorManager', ConfigModel::anchorManager());
+
+        /*跟进记录*/
+        $this->view->assign('traceRecord', ConfigModel::traceRecord());
+
         $row = $this->model->get(['id' => $ids]);
         if (!$row)
             $this->error(__('No Results were found'));
