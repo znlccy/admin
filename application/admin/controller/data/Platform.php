@@ -2,9 +2,8 @@
 
 namespace app\admin\controller\data;
 
-use app\admin\model\GiftModel;
 use app\common\controller\Backend;
-use app\admin\model\GiftModel as GiftConfig;
+use app\admin\model\GiftModel;
 use think\Db;
 
 /**
@@ -18,11 +17,14 @@ class Platform extends Backend
      */
     protected $model = null;
 
+    protected $giftConfig = null;
+
     public function _initialize()
     {
         parent::_initialize();
         $this->model = model('Platform');
-
+        $giftConfig = model('GiftConfig');
+        $this->view->assign("statusList",$giftConfig->getStatusList());
     }
     
     /**
@@ -34,12 +36,13 @@ class Platform extends Backend
     /**
      * 获取礼物配置
      */
-    public function config($ids) {
-        $row = GiftModel::get($ids);
+    public function config() {
+        /*$row = GiftModel::get();
         if (!$row)
             $this->error(__('No Results were found'));
-        $this->view->assign("row", $row->toArray());
-        return $this->view->fetch();
+        $this->view->assign("row", $row);
+        return $this->view->fetch('admin@data/giftconfig/index');*/
+        $this->redirect('admin/data/giftconfig',3, '正在跳转，请稍候......');
     }
 
     /**
