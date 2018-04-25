@@ -5,6 +5,7 @@ namespace app\admin\controller;
 use app\common\controller\Backend;
 use app\admin\model\Anchor as ConfigModel;
 use app\common\model\Config;
+use think\Db;
 
 /**
  * 
@@ -89,5 +90,13 @@ class Anchor extends Backend
             $this->error(__('No Results were found'));
         $this->view->assign("row", $row->toArray());
         return $this->view->fetch();
+    }
+
+    /**
+     * 测试使用
+     */
+    public function test() {
+        /*$row = Db::table('tb_anchor')->where('id',1)->select();
+        var_dump($row);*/
     }
 }

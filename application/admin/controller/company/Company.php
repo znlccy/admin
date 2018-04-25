@@ -79,7 +79,7 @@ class Company extends Backend
         $this->view->assign('groupList', ConfigModel::getGroupList());
 
         /*基础信息*/
-        $this->view->assign('basicInfo', ConfigModel::basicInfo());
+        $this->view->assign('basicInfo', ConfigModel::basicInfo($ids));
 
         /*分组管理*/
         $this->view->assign('groupManager', ConfigModel::groupManager());

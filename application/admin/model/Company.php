@@ -131,8 +131,12 @@ class Company extends Model
     /**
      * 获取基础信息
      */
-    public static function basicInfo() {
-
+    public static function basicInfo($ids) {
+        $company = Company::get($ids);
+        if ($company == null) {
+            echo '';
+        }
+        return $company;
     }
 
     /**
