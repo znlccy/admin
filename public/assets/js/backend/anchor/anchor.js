@@ -61,7 +61,37 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'company.link', title: __('Company.link'), visible: false},
                         {field: 'company.password', title: __('Company.password'), visible: false},
                         {field: 'company.group', title: __('Company.group'), visible: false},
-                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate,
+                            buttons: [{
+                                name: 'detail',
+                                text: __('详情'),
+                                icon: 'fa fa-list',
+                                classname: 'btn btn-info btn-xs btn-detail btn-dialog',
+                                url: 'company/company/detail'
+                            },
+                                {
+                                    name: 'detail',
+                                    text: __('分组'),
+                                    icon: 'fa fa-list',
+                                    classname: 'btn btn-info btn-xs btn-detail btn-dialog',
+                                    url: 'company/company/group'
+                                },
+                                {
+                                    name: 'detail',
+                                    text: __('主播'),
+                                    icon: 'fa fa-list',
+                                    classname: 'btn btn-info btn-xs btn-detail btn-dialog',
+                                    url: 'company/company/anchor'
+                                },
+                                {
+                                    name: 'detail',
+                                    text: __('日志'),
+                                    icon: 'fa fa-list',
+                                    classname: 'btn btn-info btn-xs btn-detail btn-dialog',
+                                    url: 'company/company/trace'
+                                }
+                            ],
+                            formatter: Table.api.formatter.operate}
                     ]
                 ]
             });

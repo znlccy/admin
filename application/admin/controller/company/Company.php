@@ -86,4 +86,25 @@ class Company extends Backend
         return $this->view->fetch();
     }
 
+    /**
+     * 主播管理
+     */
+    public function anchor(){
+        $this->redirect('admin/company/companyanchor');
+    }
+
+    /**
+     * 分组管理
+     */
+    public function group() {
+        $this->redirect('admin/company/companygroup');
+    }
+
+    /**
+     * 跟进记录
+     */
+    public function trace() {
+        $this->redirect('admin/company/tracelog');
+    }
+
 }
