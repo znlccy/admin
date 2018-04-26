@@ -39,7 +39,7 @@ class Anchor extends Backend
      * 主播详细
      */
     public function detail($ids) {
-        $siteList = [];
+       /* $siteList = [];
         $groupList = ConfigModel::getGroupList();
         foreach ($groupList as $k => $v)
         {
@@ -71,19 +71,7 @@ class Anchor extends Backend
         }
         $this->view->assign('siteList', $siteList);
         $this->view->assign('typeList', ConfigModel::getTypeList());
-        $this->view->assign('groupList', ConfigModel::getGroupList());
-
-        /*基本信息*/
-        $this->view->assign("basic", ConfigModel::basicInfo());
-
-        /*账号设置*/
-        $this->view->assign("account", ConfigModel::accountSetting());
-
-        /*跟进记录*/
-        $this->view->assign("trace", ConfigModel::traceRecord());
-
-        /*刷礼记录*/
-        $this->view->assign("brush", ConfigModel::brushRecord());
+        $this->view->assign('groupList', ConfigModel::getGroupList());*/
 
         $row = $this->model->get(['id' => $ids]);
         if (!$row)
@@ -92,11 +80,4 @@ class Anchor extends Backend
         return $this->view->fetch();
     }
 
-    /**
-     * 测试使用
-     */
-    public function test() {
-        /*$row = Db::table('tb_anchor')->where('id',1)->select();
-        var_dump($row);*/
-    }
 }

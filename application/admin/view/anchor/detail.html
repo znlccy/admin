@@ -1,161 +1,76 @@
-<style type="text/css">
-    @media (max-width: 375px) {
-        .edit-form tr td input{width:100%;}
-        .edit-form tr th:first-child,.edit-form tr td:first-child{
-            width:20%;
-        }
-        .edit-form tr th:last-child,.edit-form tr td:last-child{
-            display: none;
-        }
-    }
-</style>
-<div class="panel panel-default panel-intro">
-    <div class="panel-heading">
-        {:build_heading(null, false)}
-        <ul class="nav nav-tabs">
-            {foreach $siteList as $index=>$vo}
-            <li class="{$vo.active?'active':''}"><a href="#{$vo.name}" data-toggle="tab">{:__($vo.title)}</a></li>
-            {/foreach}
-        </ul>
-    </div>
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
-    <div class="panel-body">
-        <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade active" id="basic">
-                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
-
-                    <div class="form-group">
-                        <label for="c-pid" class="control-label col-xs-12 col-sm-2">{:__('Pid')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-                            <input id="c-pid" class="form-control" name="row[pid]" type="number" value="{$row.pid}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-aid" class="control-label col-xs-12 col-sm-2">{:__('Aid')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-                            <input id="c-aid" class="form-control" name="row[aid]" type="number" value="{$row.aid}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-roomid" class="control-label col-xs-12 col-sm-2">{:__('Roomid')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-                            <input id="c-roomid" class="form-control" name="row[roomid]" type="number" value="{$row.roomid}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-liveurl" class="control-label col-xs-12 col-sm-2">{:__('Liveurl')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-                            <input id="c-liveurl" class="form-control" name="row[liveurl]" type="text" value="{$row.liveurl}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-livestatus" class="control-label col-xs-12 col-sm-2">{:__('Livestatus')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-
-                            <div class="radio">
-                                {foreach name="livestatusList" item="vo"}
-                                <label for="row[livestatus]-{$key}"><input id="row[livestatus]-{$key}" name="row[livestatus]" type="radio" value="{$key}" {in name="key" value="$row.livestatus"}checked{/in} /> {$vo}</label>
-                                {/foreach}
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-sign" class="control-label col-xs-12 col-sm-2">{:__('Sign')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-
-                            <select  id="c-sign" class="form-control selectpicker" name="row[sign]">
-                                {foreach name="signList" item="vo"}
-                                <option value="{$key}" {in name="key" value="$row.sign"}selected{/in}>{$vo}</option>
-                                {/foreach}
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-account" class="control-label col-xs-12 col-sm-2">{:__('Account')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-                            <input id="c-account" class="form-control" name="row[account]" type="text" value="{$row.account}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-status" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-
-                            <div class="radio">
-                                {foreach name="statusList" item="vo"}
-                                <label for="row[status]-{$key}"><input id="row[status]-{$key}" name="row[status]" type="radio" value="{$key}" {in name="key" value="$row.status"}checked{/in} /> {$vo}</label>
-                                {/foreach}
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="form-group layer-footer">
-                        <label class="control-label col-xs-12 col-sm-2"></label>
-                        <div class="col-xs-12 col-sm-8">
-                            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
-                            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="tab-pane fade" id="account">
-                <form id="account-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
-                    <div class="form-group">
-                        <label for="c-mobile" class="control-label col-xs-12 col-sm-2">{:__('手机号码')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-                            <input id="c-mobile" disabled="disabled" class="form-control" name="row[mobile]" type="text" value="{$row.mobile}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c-password" class="control-label col-xs-12 col-sm-2">{:__('修改密码')}:</label>
-                        <div class="col-xs-12 col-sm-8">
-                            <input id="c-password" class="form-control" name="row[aid]" type="password" value="{$row.password}">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="tab-pane fade" id="trace">
-                <div style="margin-bottom: 8px">
-                    <input type="date" style="width: 180px; height: 34px;" />
-                    <button class="fa fa-plus" style="margin-left: 5px; width: 80px; height: 34px;border: 0px solid #18BC9C;color: white; background: #18BC9C;">添加</button>
-                </div>
-                <table id="tabletrace" class="table table-striped table-bordered table-hover">
-                    <tr align="center" valign="center">
-                        <td width="20%"><strong>记录人/时间</strong></td>
-                        <td width="60%"><strong>内容</strong></td>
-                        <td width="20%"><strong>操作</strong></td>
-                    </tr>
-                    <tr>
-                        <td align="center">一个主播@</br>1月1号 20:31</td>
-                        <td align="left">快来付钱啦</td>
-                        <td align="center" valign="center">
-                            <button type="button" style="border: 0px solid #E74C3C;color: white; background: #E74C3C;height: 22px; border-radius: 2px" onclick="javascript: alert('删除')">删除</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="tab-pane fade" id="brush">
-
-                <table id="tablebrush" class="table table-striped table-bordered table-hover">
-                    <tr align="center">
-                        <td><strong>日期</strong></td>
-                        <td><strong>账号</strong></td>
-                        <td><strong>金额</strong></td>
-                        <td><strong>截图</strong></td>
-                        <td><strong>操作</strong></td>
-                    </tr>
-                    <tr align="center" valign="center">
-                        <td width="20%">1978-08-24</td>
-                        <td width="20%">shfiw3e23</td>
-                        <td width="20%">￥12457.58</td>
-                        <td width="25%"></td>
-                        <td width="15%">
-                            <button type="button" style="border: 0px solid #E74C3C;color: white; background: #E74C3C;height: 22px; border-radius: 2px" onclick="javascript: alert('删除')">删除</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+    <div class="form-group">
+        <label for="c-pid" class="control-label col-xs-12 col-sm-2">{:__('Pid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pid" class="form-control" name="row[pid]" type="number" value="{$row.pid}">
         </div>
     </div>
-</div>
+    <div class="form-group">
+        <label for="c-aid" class="control-label col-xs-12 col-sm-2">{:__('Aid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-aid" class="form-control" name="row[aid]" type="number" value="{$row.aid}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-roomid" class="control-label col-xs-12 col-sm-2">{:__('Roomid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-roomid" class="form-control" name="row[roomid]" type="number" value="{$row.roomid}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-liveurl" class="control-label col-xs-12 col-sm-2">{:__('Liveurl')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-liveurl" class="form-control" name="row[liveurl]" type="text" value="{$row.liveurl}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-livestatus" class="control-label col-xs-12 col-sm-2">{:__('Livestatus')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <div class="radio">
+                {foreach name="livestatusList" item="vo"}
+                <label for="row[livestatus]-{$key}"><input id="row[livestatus]-{$key}" name="row[livestatus]" type="radio" value="{$key}" {in name="key" value="$row.livestatus"}checked{/in} /> {$vo}</label>
+                {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-sign" class="control-label col-xs-12 col-sm-2">{:__('Sign')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <select  id="c-sign" class="form-control selectpicker" name="row[sign]">
+                {foreach name="signList" item="vo"}
+                <option value="{$key}" {in name="key" value="$row.sign"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-account" class="control-label col-xs-12 col-sm-2">{:__('Account')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-account" class="form-control" name="row[account]" type="text" value="{$row.account}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-status" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <div class="radio">
+                {foreach name="statusList" item="vo"}
+                <label for="row[status]-{$key}"><input id="row[status]-{$key}" name="row[status]" type="radio" value="{$key}" {in name="key" value="$row.status"}checked{/in} /> {$vo}</label>
+                {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

@@ -38,7 +38,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate,
                             buttons: [{
                                 name: 'detail',
-                                text: __('基础信息'),
+                                text: __('Detail'),
                                 icon: 'fa fa-list',
                                 classname: 'btn btn-info btn-xs btn-detail btn-dialog',
                                 url: 'company/company/detail'

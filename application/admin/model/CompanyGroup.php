@@ -2,13 +2,12 @@
 
 namespace app\admin\model;
 
-use think\Db;
 use think\Model;
 
-class Company extends Model
+class CompanyGroup extends Model
 {
     // 表名
-    protected $name = 'company';
+    protected $name = 'company_group';
     
     // 自动写入时间戳字段
     protected $autoWriteTimestamp = false;
@@ -21,5 +20,14 @@ class Company extends Model
     protected $append = [
 
     ];
+    
+
+    
+
+
+
+
+
+
 
 }

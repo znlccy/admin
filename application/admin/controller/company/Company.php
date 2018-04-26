@@ -4,6 +4,8 @@ namespace app\admin\controller\company;
 
 use app\common\controller\Backend;
 use app\admin\model\Company as ConfigModel;
+use think\Db;
+use think\Request as request;
 
 /**
  * 
@@ -43,8 +45,7 @@ class Company extends Backend
      */
     public function detail($ids)
     {
-
-        $siteList = [];
+        /*$siteList = [];
         $groupList = ConfigModel::getGroupList();
         foreach ($groupList as $k => $v)
         {
@@ -76,19 +77,7 @@ class Company extends Backend
         }
         $this->view->assign('siteList', $siteList);
         $this->view->assign('typeList', ConfigModel::getTypeList());
-        $this->view->assign('groupList', ConfigModel::getGroupList());
-
-        /*基础信息*/
-        $this->view->assign('basicInfo', ConfigModel::basicInfo($ids));
-
-        /*分组管理*/
-        $this->view->assign('groupManager', ConfigModel::groupManager());
-
-        /*主播管理*/
-        $this->view->assign('anchorManager', ConfigModel::anchorManager());
-
-        /*跟进记录*/
-        $this->view->assign('traceRecord', ConfigModel::traceRecord());
+        $this->view->assign('groupList', ConfigModel::getGroupList());*/
 
         $row = $this->model->get(['id' => $ids]);
         if (!$row)
