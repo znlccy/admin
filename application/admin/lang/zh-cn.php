@@ -158,6 +158,7 @@ return [
     'Companygroup'                                          => '分组管理',
     'Companyanchor'                                         => '主播管理',
     'CompanyBasic'                                          => '基础信息',
+    'Anchorgroup'                                           => '分组管理',
     'Tracelog'                                              => '跟进记录',
     'Attachment'                                            => '附件管理',
     'Profile'                                               => '个人配置',

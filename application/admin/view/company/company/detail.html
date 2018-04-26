@@ -1,58 +1,67 @@
-<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
-    <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-            <label for="c-cellphone" class="control-label col-xs-12 col-sm-4">{:__('Cellphone')}:</label>
-            <div class="col-xs-12 col-sm-6">
-                <input id="c-cellphone" disabled="disabled" class="form-control" name="row[cellphone]" type="text" value="{$row.cellphone}">
+<div style="margin-left: 50px">
+    <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label for="c-cellphone" class="control-label col-xs-12 col-sm-4">{:__('Cellphone')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <input id="c-cellphone" disabled="disabled" class="form-control" name="row[cellphone]" type="text" value="{$row.cellphone}">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="c-name" class="control-label col-xs-12 col-sm-4">{:__('Name')}:</label>
-            <div class="col-xs-12 col-sm-6">
-                <input id="c-name" disabled="disabled" class="form-control" name="row[name]" type="text" value="{$row.name}">
+            <div class="form-group">
+                <label for="c-name" class="control-label col-xs-12 col-sm-4">{:__('Name')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <input id="c-name" disabled="disabled" class="form-control" name="row[name]" type="text" value="{$row.name}">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="c-anchornum" class="control-label col-xs-12 col-sm-4">{:__('Anchornum')}:</label>
-            <div class="col-xs-12 col-sm-6">
-                <input id="c-anchornum" class="form-control" name="row[anchornum]" type="number" value="{$row.anchornum}">
+            <div class="form-group">
+                <label for="c-introduce" class="control-label col-xs-12 col-sm-4">{:__('公司介绍')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <textarea name="row[introduce]" class="form-control"  id="c-introduce" cols="30" rows="5">{$row.introduce}</textarea>
+                    <!--<input id="c-introduce" disabled="disabled" class="form-control" name="row[introduce]" type="text" value="{$row.introduce}">-->
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="c-grade" class="control-label col-xs-12 col-sm-4">{:__('Grade')}:</label>
-            <div class="col-xs-12 col-sm-6">
-                <input id="c-grade" class="form-control" name="row[grade]" type="number" value="{$row.grade}">
+            <div class="form-group">
+                <label for="c-anchornum" class="control-label col-xs-12 col-sm-4">{:__('Anchornum')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <input id="c-anchornum" class="form-control" name="row[anchornum]" type="number" value="{$row.anchornum}">
+                </div>
             </div>
+            <div class="form-group">
+                <label for="c-grade" class="control-label col-xs-12 col-sm-4">{:__('Grade')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <input id="c-grade" class="form-control" name="row[grade]" type="number" value="{$row.grade}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="c-expired" class="control-label col-xs-12 col-sm-4">{:__('Expired')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <input id="c-expired" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expired]" type="text" value="{$row.expired}">
+                </div>
+            </div>
+
         </div>
-        <div class="form-group">
-            <label for="c-expired" class="control-label col-xs-12 col-sm-4">{:__('Expired')}:</label>
-            <div class="col-xs-12 col-sm-6">
-                <input id="c-expired" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expired]" type="text" value="{$row.expired}">
+
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label for="c-manager" class="control-label col-xs-12 col-sm-4">{:__('Manager')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <input id="c-manager" class="form-control" name="row[manager]" type="text" value="{$row.manager}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="c-status" class="control-label col-xs-12 col-sm-4">{:__('Status')}:</label>
+                <div class="col-xs-12 col-sm-6">
+                    <input id="c-status" class="form-control" name="row[status]" type="text" value="{$row.status}">
+                </div>
             </div>
         </div>
 
-    </div>
-
-    <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-            <label for="c-manager" class="control-label col-xs-12 col-sm-4">{:__('Manager')}:</label>
-            <div class="col-xs-12 col-sm-6">
-                <input id="c-manager" class="form-control" name="row[manager]" type="text" value="{$row.manager}">
+        <div class="form-group" style="margin-left: 180px">
+            <label class="control-label col-xs-12 col-sm-2"></label>
+            <div class="col-xs-12 col-sm-8">
+                <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+                <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
             </div>
         </div>
-        <div class="form-group">
-            <label for="c-status" class="control-label col-xs-12 col-sm-4">{:__('Status')}:</label>
-            <div class="col-xs-12 col-sm-6">
-                <input id="c-status" class="form-control" name="row[status]" type="text" value="{$row.status}">
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group layer-footer">
-        <label class="control-label col-xs-12 col-sm-2"></label>
-        <div class="col-xs-12 col-sm-8">
-            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
-            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
-        </div>
-    </div>
-</form>
+    </form>
+</div>

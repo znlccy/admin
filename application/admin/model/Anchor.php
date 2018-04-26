@@ -22,7 +22,9 @@ class Anchor extends Model
         'sign_text',
         'status_text'
     ];
+    
 
+    
     public function getLivestatusList()
     {
         return ['normal' => __('Normal'),'stop' => __('Stop')];
@@ -63,4 +65,16 @@ class Anchor extends Model
     }
 
 
+
+
+    public function platform()
+    {
+        return $this->belongsTo('Platform', 'pid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
+
+
+    public function company()
+    {
+        return $this->belongsTo('Company', 'cid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }
