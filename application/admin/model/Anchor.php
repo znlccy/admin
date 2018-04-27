@@ -22,9 +22,7 @@ class Anchor extends Model
         'sign_text',
         'status_text'
     ];
-    
 
-    
     public function getLivestatusList()
     {
         return ['normal' => __('Normal'),'stop' => __('Stop')];
@@ -64,8 +62,12 @@ class Anchor extends Model
         return isset($list[$value]) ? $list[$value] : '';
     }
 
-
-
+    /**
+     * 获取主播分组
+     */
+    public function getAncohorGroupList() {
+        return ['category' => __('分组A'),'stop' => __('分组B')];
+    }
 
     public function platform()
     {
