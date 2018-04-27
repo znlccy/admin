@@ -3,6 +3,8 @@
 namespace app\admin\controller\anchor;
 
 use app\common\controller\Backend;
+use think\Db;
+use think\Request;
 
 /**
  * 
@@ -104,5 +106,65 @@ class Anchor extends Backend
      */
     public function brush() {
         $this->redirect('admin/anchor/brushlog');
+    }
+
+    /**
+     * 保存基本信息
+     */
+    public function saveBasicInfo() {
+        //获得所有请求数据
+        $data = Request::instance()->post();
+        if ($data == null) {
+            $this->error('请求数据为空');
+        }
+        $basicInfo = $data['row'];
+        if ($basicInfo == null) {
+            $this->error('主播基本信息填写为空');
+        }
+        $link = $basicInfo['link'];
+        $remark = $basicInfo['remark'];
+        $sign = $basicInfo['sign'];
+        $category = $basicInfo['category'];
+        $roomid = $basicInfo['roomid'];
+
+        if ($link == null or $sign == null or $category == null) {
+            $this->error('提交的数据联系方式、签约、分组其中有空值');
+        }
+
+        $query = Db::table('tb_anchor')->where('roomid', $roomid)->select();
+        if ($query == null) {
+            $this->error('没有该数据');
+        } else {
+            $result = Db::table('tb_anchor')->where('roomid', $roomid)->update(['link' => $link, 'sign' => $sign, 'group' => $category, 'remark' => $remark]);
+            if ($result == 1) {
+                $this->success('保存成功');
+            }
+            else {
+                $this->error('保存失败');
+            }
+        }
+    }
+
+    /**
+     * 账号设置
+     */
+    public function accountSetting() {
+        $account = Request::instance()->post();
+        $account_row = $account['row'];
+        $password = $account_row['password'];
+        $mobile = $account_row ['mobile'];
+        if ($mobile == null or $password == null) {
+            $this->error('手机号码为空或者密码为空');
+        }
+        $query = Db::table('tb_anchor')->where('mobile', $mobile)->select();
+        if ($query == null) {
+            $this->error('数据库中不存在该手机号码');
+        }
+        $result = Db::table('tb_anchor')->where('mobile', $mobile)->update(['password' => md5($password)]);
+        if ($result = 1) {
+            $this->success('保存成功');
+        } else {
+            $this->error('保存失败');
+        }
     }
 }

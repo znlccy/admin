@@ -1,4 +1,4 @@
-<form id="edit-form" style="margin-top: 38px" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+<form id="edit-form" style="margin-top: 38px" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="__URL__/accountSetting">
 
     <!--<div class="form-group">
         <label for="c-pid" class="control-label col-xs-12 col-sm-2">{:__('Pid')}:</label>
@@ -21,13 +21,13 @@
     <div class="form-group">
         <label for="c-mobile" class="control-label col-xs-12 col-sm-4">{:__('Mobile')}:</label>
         <div class="col-xs-12 col-sm-4">
-            <input id="c-mobile" disabled="disabled" class="form-control" name="row[mobile]" type="text" value="{$row.mobile}">
+            <input id="c-mobile" readonly class="form-control" name="row[mobile]" type="text" value="{$row.mobile}">
         </div>
     </div>
     <div class="form-group">
         <label for="c-password" class="control-label col-xs-12 col-sm-4">{:__('Password')}:</label>
         <div class="col-xs-12 col-sm-4">
-            <input id="c-password" class="form-control" name="row[password]" type="text">
+            <input id="c-password" class="form-control" name="row[password]" type="password">
         </div>
     </div>
     <!--<div class="form-group">
@@ -125,7 +125,7 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-4"></label>
         <div class="col-xs-12 col-sm-8">
-            <button type="submit" style="width: 117px" class="btn btn-success btn-embossed disabled">{:__('保存')}</button>
+            <button type="submit" style="width: 117px" class="btn btn-success btn-embossed">{:__('保存')}</button>
             <button type="reset" style="width: 117px" class="btn btn-default btn-embossed">{:__('Reset')}</button>
         </div>
     </div>
