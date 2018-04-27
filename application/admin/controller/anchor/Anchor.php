@@ -84,8 +84,12 @@ class Anchor extends Backend
     /**
      * 账号设置界面
      */
-    public function account() {
-        $this->redirect('anchor/anchor/account');
+    public function account($ids) {
+        $row = $this->model->get(['id' => $ids]);
+        if (!$row)
+            $this->error(__('No Results were found'));
+        $this->view->assign("row", $row->toArray());
+        return $this->view->fetch('account');
     }
 
     /**
