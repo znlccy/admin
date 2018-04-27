@@ -10,6 +10,10 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     edit_url: 'anchor/anchor/edit',
                     del_url: 'anchor/anchor/del',
                     multi_url: 'anchor/anchor/multi',
+                    detail_url: 'anchor/anchor/detail',
+                    account_url: 'anchor/anchor/account',
+                    trace_url: 'anchor/anchor/trace',
+                    brush_url: 'anchor/anchor/brush',
                     table: 'anchor',
                 }
             });
@@ -67,28 +71,28 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                 text: __('详情'),
                                 icon: 'fa fa-list',
                                 classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                url: 'company/company/detail'
+                                url: 'anchor/anchor/detail'
                             },
                                 {
-                                    name: 'detail',
-                                    text: __('分组'),
+                                    name: 'account',
+                                    text: __('账号'),
                                     icon: 'fa fa-list',
                                     classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                    url: 'company/company/group'
+                                    url: 'anchor/anchor/account'
                                 },
                                 {
-                                    name: 'detail',
-                                    text: __('主播'),
-                                    icon: 'fa fa-list',
-                                    classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                    url: 'company/company/anchor'
-                                },
-                                {
-                                    name: 'detail',
+                                    name: 'trace',
                                     text: __('日志'),
                                     icon: 'fa fa-list',
                                     classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                    url: 'company/company/trace'
+                                    url: 'anchor/anchor/trace'
+                                },
+                                {
+                                    name: 'brush',
+                                    text: __('刷礼'),
+                                    icon: 'fa fa-list',
+                                    classname: 'btn btn-info btn-xs btn-detail btn-dialog',
+                                    url: 'anchor/anchor/brush'
                                 }
                             ],
                             formatter: Table.api.formatter.operate}

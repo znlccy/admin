@@ -69,4 +69,36 @@ class Anchor extends Backend
         }
         return $this->view->fetch();
     }
+
+    /**
+     * 基本信息界面
+     */
+    public function detail($ids) {
+        $row = $this->model->get(['id' => $ids]);
+        if (!$row)
+            $this->error(__('No Results were found'));
+        $this->view->assign("row", $row->toArray());
+        return $this->view->fetch();
+    }
+
+    /**
+     * 账号设置界面
+     */
+    public function account() {
+        $this->redirect('anchor/anchor/account');
+    }
+
+    /**
+     * 跟进记录界面
+     */
+    public function trace() {
+        $this->redirect('admin/company/tracelog');
+    }
+
+    /**
+     * 刷礼记录界面
+     */
+    public function brush() {
+        $this->redirect('admin/anchor/brushlog');
+    }
 }
