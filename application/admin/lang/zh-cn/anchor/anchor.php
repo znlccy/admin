@@ -31,5 +31,7 @@ return [
     'Company.introduce'  =>  '公司介绍',
     'Company.link'  =>  '联系方式',
     'Company.password'  =>  '密码',
-    'Company.group'  =>  '分组'
+    'Company.group'  =>  '分组',
+    'Signed'  => '已签约',
+    'Nosign'  => '未签约',
 ];
