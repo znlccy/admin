@@ -1,34 +1,77 @@
-<form id="edit-form" class="form-horizontal" style="margin-top: 38px" role="form" data-toggle="validator" method="POST" action="">
+<form id="edit-form" class="form-horizontal" style="margin-top: 38px" role="form" data-toggle="validator" method="POST" action="__URL__/saveBasicInfo">
     <div class="col-xs-12 col-md-6 col-sm-6">
         <div class="form-group">
             <label for="c-cellphone" class="control-label col-xs-12 col-sm-3">{:__('Cellphone')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <input id="c-cellphone" disabled="disabled" class="form-control" name="row[cellphone]" type="text" value="{$row.cellphone}">
+                <input id="c-cellphone" readonly="readonly" class="form-control" name="row[cellphone]" type="text" value="{$row.cellphone}">
             </div>
         </div>
         <div class="form-group">
             <label for="c-name" class="control-label col-xs-12 col-sm-3">{:__('Name')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <input id="c-name" disabled="disabled" class="form-control" name="row[name]" type="text" value="{$row.name}">
+                <input id="c-name" readonly="readonly" class="form-control" name="row[name]" type="text" value="{$row.name}">
             </div>
         </div>
         <div class="form-group">
             <label for="c-introduce" class="control-label col-xs-12 col-sm-3">{:__('公司介绍')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <textarea name="row[introduce]" class="form-control"  id="c-introduce" cols="30" rows="5">{$row.introduce}</textarea>
+                <textarea name="row[introduce]" placeholder="请输入内容" class="form-control"  id="c-introduce" cols="30" rows="5">{$row.introduce}</textarea>
                 <!--<input id="c-introduce" disabled="disabled" class="form-control" name="row[introduce]" type="text" value="{$row.introduce}">-->
             </div>
         </div>
         <div class="form-group">
+            <label for="c-link" class="control-label col-xs-12 col-sm-3">{:__('联系方式')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <input id="c-link" placeholder="请输入联系方式" class="form-control" name="row[link]" type="text" value="{$row.link}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="c-manager" class="control-label col-xs-12 col-sm-3">{:__('商务经理')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <select name="row[manager]" id="c-manager" class="form-control" placeholder="请输入商务经理">
+                    <option value="default" selected>请选择</option>
+                    <option value="{$row.manager}">{$row.manager}</option>
+                </select>
+                <!--<input id="c-manager" placeholder="请输入联系方式" class="form-control" name="row[manager]" type="text" value="{$row.manager}">-->
+            </div>
+        </div>
+        <!--<div class="form-group">
             <label for="c-anchornum" class="control-label col-xs-12 col-sm-3">{:__('Anchornum')}:</label>
             <div class="col-xs-12 col-sm-8">
                 <input id="c-anchornum" class="form-control" name="row[anchornum]" type="number" value="{$row.anchornum}">
             </div>
-        </div>
-        <div class="form-group">
+        </div>-->
+        <!--<div class="form-group">
             <label for="c-grade" class="control-label col-xs-12 col-sm-3">{:__('Grade')}:</label>
             <div class="col-xs-12 col-sm-8">
                 <input id="c-grade" class="form-control" name="row[grade]" type="number" value="{$row.grade}">
+            </div>
+        </div>-->
+        <div class="form-group">
+            <label for="c-password" class="control-label col-xs-12 col-sm-3">{:__('账号密码')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <input id="c-password" class="form-control" placeholder="请输入密码" name="row[password]" type="password" value="{$row.password}">
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <label for="c-expired" class="control-label col-xs-12 col-sm-3">{:__('Expired')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <input id="c-expired" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expired]" type="text" value="{$row.expired}">
+            </div>
+        </div>-->
+    </div>
+
+    <div class="col-xs-12 col-md-6 col-sm-6">
+        <div class="form-group">
+            <label for="c-grade" class="control-label col-xs-12 col-sm-3">{:__('Grade')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <select name="row[grade]" id="c-grade" class="form-control" placeholder="请输入商务经理">
+                    <option name="free" value="default" selected readonly="readonly">免费版</option>
+                    <option value="{$row.grade}">会员版</option>
+                    <option value="{$row.grade}">高级会员版</option>
+                    <option value="{$row.grade}">定制版</option>
+                </select>
+                <!--<input id="c-grade" class="form-control" name="row[grade]" type="number" value="{$row.grade}">-->
             </div>
         </div>
         <div class="form-group">
@@ -37,20 +80,20 @@
                 <input id="c-expired" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[expired]" type="text" value="{$row.expired}">
             </div>
         </div>
-
-    </div>
-
-    <div class="col-xs-12 col-md-6 col-sm-6">
-        <div class="form-group">
+        <!--<div class="form-group">
             <label for="c-manager" class="control-label col-xs-12 col-sm-3">{:__('Manager')}:</label>
             <div class="col-xs-12 col-sm-8">
                 <input id="c-manager" class="form-control" name="row[manager]" type="text" value="{$row.manager}">
             </div>
-        </div>
+        </div>-->
         <div class="form-group">
-            <label for="c-status" class="control-label col-xs-12 col-sm-3">{:__('Status')}:</label>
+            <label for="c-status" class="control-label col-xs-12 col-sm-3">{:__('账户状态')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <input id="c-status" class="form-control" name="row[status]" type="text" value="{$row.status}">
+                <select name="row[status]" id="c-status" class="form-control">
+                    <option value="normal" name="normal" selected>正常</option>
+                    <option value="stop" name="stop">封停</option>
+                </select>
+                <!--<input id="c-status" class="form-control" name="row[status]" type="text" value="{$row.status}">-->
             </div>
         </div>
     </div>
