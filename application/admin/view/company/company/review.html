@@ -6,11 +6,9 @@
             <div class="tab-pane fade active in" id="one">
                 <div class="widget-body no-padding">
                     <div id="toolbar" class="toolbar">
-                        <a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>
-                        <a href="javascript:;" class="btn btn-success btn-add {:$auth->check('company/company/add')?'':'hide'}" title="{:__('Add')}" ><i class="fa fa-plus"></i> {:__('Add')}</a>
-                        <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled {:$auth->check('company/company/edit')?'':'hide'}" title="{:__('Edit')}" ><i class="fa fa-pencil"></i> {:__('Edit')}</a>
-                        <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled {:$auth->check('company/company/del')?'':'hide'}" title="{:__('Delete')}" ><i class="fa fa-trash"></i> {:__('Delete')}</a>
-                        <a href="__URL__/review" class="btn btn-info btn-review " title="{:__('实名认证')}" ><i class="fa fa-file"></i> {:__('实名认证')}</a>
+                        <!--<a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>-->
+                        <a href="javascript:;" class="btn btn-info btn-review {:$auth->check('company/company/review')?'':'hide'}" title="{:__('批量审核')}" ><i class="fa fa-pencil"></i> {:__('批量审核')}</a>
+                        <a href="javascript:;" class="btn btn-danger btn-review {:$auth->check('company/company/refuse')?'':'hide'}" title="{:__('批量拒绝')}" ><i class="fa fa-pencil"></i> {:__('批量拒绝')}</a>
                         <!--<a href="javascript:;" class="btn btn-danger btn-import {:$auth->check('company/company/import')?'':'hide'}" title="{:__('Import')}" id="btn-import-file" data-url="ajax/upload" data-mimetype="csv,xls,xlsx" data-multiple="false"><i class="fa fa-upload"></i> {:__('Import')}</a>
 
                         <div class="dropdown btn-group {:$auth->check('company/company/multi')?'':'hide'}">

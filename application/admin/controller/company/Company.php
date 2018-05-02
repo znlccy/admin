@@ -81,6 +81,12 @@ class Company extends Backend
         $this->view->assign('typeList', ConfigModel::getTypeList());
         $this->view->assign('groupList', ConfigModel::getGroupList());*/
 
+        $manager = Db::query('select manager from tb_company');
+        if ($manager == null) {
+            $this->error('数据库里面还没有项目经理');
+        }
+        $this->view->assign('manager', $manager);
+
         $row = $this->model->get(['id' => $ids]);
         if (!$row)
             $this->error(__('No Results were found'));
@@ -153,7 +159,12 @@ class Company extends Backend
      * 获得商务经理
      */
     public function getManagerList() {
-
+        $manager = Db::query('select manager from tb_company');
+        if ($manager == null) {
+            $this->error('数据库里面还没有项目经理');
+        }
+        $this->view->assign('manager', $manager);
+        return $this->view->fetch('company/company/detail');
     }
 
     /**
@@ -162,6 +173,28 @@ class Company extends Backend
     public function getUsername() {
         $loginUser = Session::get('admin');
         printf($loginUser['username']);
+    }
+
+    /**
+     * 公司审核
+     */
+    public function review() {
+
+        return $this->view->fetch();
+    }
+
+    /**
+     * 批量审核
+     */
+    public function multiReview() {
+
+    }
+
+    /**
+     * 批量拒绝
+     */
+    public function multiRefuse() {
+
     }
 
 }
