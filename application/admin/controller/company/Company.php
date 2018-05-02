@@ -7,6 +7,7 @@ use app\admin\model\Company as ConfigModel;
 use think\Db;
 use think\Request;
 use think\Url;
+use think\Session;
 
 /**
  * 
@@ -149,10 +150,18 @@ class Company extends Backend
     }
 
     /**
-     *
+     * 获得商务经理
      */
     public function getManagerList() {
 
+    }
+
+    /**
+     * 获取登录用户名
+     */
+    public function getUsername() {
+        $loginUser = Session::get('admin');
+        printf($loginUser['username']);
     }
 
 }

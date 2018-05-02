@@ -65,6 +65,7 @@ class Auth extends \fast\Auth
         return true;
     }
 
+
     /**
      * 注销登录
      */

@@ -3,6 +3,7 @@
 namespace app\admin\controller\company;
 
 use app\common\controller\Backend;
+use think\Session;
 
 /**
  * 
@@ -21,7 +22,8 @@ class Tracelog extends Backend
     {
         parent::_initialize();
         $this->model = model('TraceLog');
-
+        $loginUser = Session::get('admin');
+        $this->view->assign('userinfo', $loginUser);
     }
     
     /**
@@ -29,6 +31,11 @@ class Tracelog extends Backend
      * 因此在当前控制器中可不用编写增删改查的代码,除非需要自己控制这部分逻辑
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
-    
+
+    public function index(){
+        $loginUser = Session::get('admin');
+        $this->view->assign('userinfo', $loginUser);
+        return $this->view->fetch();
+    }
 
 }
