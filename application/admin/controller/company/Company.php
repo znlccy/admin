@@ -180,6 +180,8 @@ class Company extends Backend
      */
     public function review() {
 
+        $review = Db::query('select id,name,legalperson,registeredaddress,businesslicense  from tb_company');
+        $this->view->assign('company', $review);
         return $this->view->fetch();
     }
 
@@ -187,14 +189,14 @@ class Company extends Backend
      * 批量审核
      */
     public function multiReview() {
-
+        echo '批量审核';
     }
 
     /**
      * 批量拒绝
      */
     public function multiRefuse() {
-
+        echo '批量拒绝';
     }
 
 }
