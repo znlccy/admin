@@ -134,7 +134,8 @@ class Company extends Backend
         $link = $basicInfo['link'];
         $manager = $basicInfo['manager'];
         $password = $basicInfo['password'];
-        $grade = $basicInfo['grade'];
+        $grade = $_POST['grade'];
+        var_dump($grade);
         $expired = $basicInfo['expired'];
         $status = $basicInfo['status'];
 
@@ -219,7 +220,9 @@ class Company extends Backend
             if($info){
                 // 成功上传后 获取上传信息
                 // 输出 jpg
-                $result = Db::table('tb_company')->where('id', 2)->update(['businesslicense' => '/uploads/'.$info->getSaveName()]);
+                //转换\为/
+                $keepPath = str_replace("\\", "/", $info->getSaveName());
+                $result = Db::table('tb_company')->where('id', 1)->update(['businesslicense' => '/uploads/'.$keepPath]);
                 if ($result == 1) {
                     return $this->success('上传成功');
                 } else {
@@ -234,6 +237,41 @@ class Company extends Backend
                 // 上传失败获取错误信息
                 /*echo $file->getError();*/
                 return $this->error('上传失败');
+            }
+        }
+    }
+
+    /**
+     * 实现单个审核
+     */
+    public function singleReview() {
+        $requestId = Request::instance()->get('id');
+        echo $requestId;
+        if ($requestId == null) {
+            return $this->error('请求参数为空');
+        } else {
+            $result = Db::table('tb_company')->where('id', $requestId)->update(['reviewstatus' => 'pass']);
+            if ($result == 1) {
+                return $this->success('审核通过');
+            } else {
+                return $this->error('审核失败');
+            }
+        }
+    }
+
+    /**
+     * 实现单个拒绝
+     */
+    public function singleRefuse() {
+        $requestId = Request::instance()->get('id');
+        if ($requestId == null) {
+            return $this->error('请求参数为空');
+        } else {
+            $result = Db::table('tb_company')->where('id', $requestId)->update(['reviewstatus' => 'fail']);
+            if ($result == 1) {
+                return $this->success('拒绝成功');
+            } else {
+                return $this->error('拒绝失败');
             }
         }
     }

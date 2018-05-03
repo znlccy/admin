@@ -66,11 +66,11 @@
         <div class="form-group">
             <label for="c-grade" class="control-label col-xs-12 col-sm-3">{:__('Grade')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <select name="row[grade]" id="c-grade" class="form-control" placeholder="请输入商务经理">
-                    <option name="free" value="default" selected readonly="readonly">免费版</option>
-                    <option value="{$row.grade}">会员版</option>
-                    <option value="{$row.grade}">高级会员版</option>
-                    <option value="{$row.grade}">定制版</option>
+                <select name="grade" id="c-grade" class="form-control" placeholder="请输入商务经理">
+                    <option name="free" selected readonly="readonly">免费版</option>
+                    <option>会员版</option>
+                    <option>高级会员版</option>
+                    <option>定制版</option>
                 </select>
                 <!--<input id="c-grade" class="form-control" name="row[grade]" type="number" value="{$row.grade}">-->
             </div>

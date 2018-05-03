@@ -44,8 +44,8 @@
                                 <!--<img src="__PUBLIC__/assets/{$vo.businesslicense}" width="120" height="25" alt="">-->
                             </td>
                             <td style="vertical-align: middle" >
-                                <button type="submit" style="width: 70px" class="btn btn-success fa fa-info btn-embossed">{:__('审核')}</button>
-                                <button type="reset" style="width: 70px" class="btn btn-danger fa fa-warning btn-embossed">{:__('拒绝')}</button>
+                                <button type="submit" style="width: 70px" onclick="javascript:window.location.href='__URL__/singleReview?id=2'" class="btn btn-success fa fa-info btn-embossed">{:__('审核')}</button>
+                                <button type="reset" style="width: 70px" onclick="javascript:window.location.href='__URL__/singleRefuse?id=1'" class="btn btn-danger fa fa-warning btn-embossed">{:__('拒绝')}</button>
                             </td>
                         </tr>
                         {/volist}

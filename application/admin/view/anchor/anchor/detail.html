@@ -51,7 +51,7 @@
         <div class="form-group">
             <label for="c-avatar" class="control-label col-xs-12 col-sm-3">{:__('头像')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <img id="c-avatar" name="row[avatar]" src="{$row.avatar}" width="20" height="5" alt="头像">
+                <img id="c-avatar" name="row[avatar]" src="__PUBLIC__/{$row.avatar}" width="70" height="60" alt="头像">
             </div>
         </div>
         <!--<div class="form-group">
@@ -80,10 +80,10 @@
             <label for="c-sign" class="control-label col-xs-12 col-sm-3">{:__('分组')}:</label>
             <div class="col-xs-12 col-sm-8">
 
-                <select  id="c-category" class="form-control selectpicker" name="row[category]">
-                    {foreach name="signList" item="vo"}
-                    <option value="{$key}" {in name="key" value="$row.category"}selected{/in}>{$vo}</option>
-                    {/foreach}
+                <select  id="c-category" class="form-control selectpicker" name="group">
+                    {volist id="vo" name="group"}
+                    <option value="{$vo.name}">{$vo.name}</option>
+                    {/volist}
                 </select>
 
             </div>

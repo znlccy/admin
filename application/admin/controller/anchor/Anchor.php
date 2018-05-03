@@ -79,6 +79,8 @@ class Anchor extends Backend
         $row = $this->model->get(['id' => $ids]);
         if (!$row)
             $this->error(__('No Results were found'));
+        $group = Db::table('tb_anchor_group')->select();
+        $this->view->assign("group", $group);
         $this->view->assign("row", $row->toArray());
         return $this->view->fetch();
     }
@@ -126,6 +128,7 @@ class Anchor extends Backend
         $sign = $basicInfo['sign'];
         $category = $basicInfo['category'];
         $roomid = $basicInfo['roomid'];
+        $group = $_POST['group'];
 
         if ($link == null or $sign == null or $category == null) {
             $this->error('提交的数据联系方式、签约、分组其中有空值');
@@ -135,7 +138,7 @@ class Anchor extends Backend
         if ($query == null) {
             $this->error('没有该数据');
         } else {
-            $result = Db::table('tb_anchor')->where('roomid', $roomid)->update(['link' => $link, 'sign' => $sign, 'group' => $category, 'remark' => $remark]);
+            $result = Db::table('tb_anchor')->where('roomid', $roomid)->update(['link' => $link, 'sign' => $sign, 'group' => $category, 'remark' => $remark, 'group' => $group]);
             if ($result == 1) {
                 $this->success('保存成功');
             }
