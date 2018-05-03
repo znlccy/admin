@@ -25,28 +25,30 @@
                            data-operate-del="{:$auth->check('company/company/del')}"
                            data-operate-detail="{:$auth->check('company/company/detail')}"
                            width="100%">
-                        <tr>
+                        <tr align="center">
                             <td><input type="checkbox"></td>
-                            <td>公司名称</td>
-                            <td>法人</td>
-                            <td>注册地址</td>
-                            <td>营业执照</td>
-                            <td>操作</td>
+                            <td><strong>公司名称</strong></td>
+                            <td><strong>法人</strong></td>
+                            <td><strong>注册地址</strong></td>
+                            <td><strong>营业执照</strong></td>
+                            <td><strong>操作</strong></td>
                         </tr>
                         {volist id="vo" name="company"}
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>{$vo.name}</td>
-                            <td>{$vo.legalperson}</td>
-                            <td>{$vo.registeredaddress}</td>
-                            <td>{$vo.businesslicense}</td>
-                            <td>审核 拒绝</td>
+                        <tr align="center" valign="center">
+                            <td width="7%" style="vertical-align: middle"><input type="checkbox"></td>
+                            <td width="18%" style="vertical-align: middle">{$vo.name}</td>
+                            <td width="15%" style="vertical-align: middle">{$vo.legalperson}</td>
+                            <td width="23%" style="vertical-align: middle" >{$vo.registeredaddress}</td>
+                            <td width="18%" style="vertical-align: middle" ><img src="__PUBLIC__/assets/{$vo.businesslicense}" width="120" height="25" alt=""></td>
+                            <td style="vertical-align: middle" >
+                                <button type="submit" style="width: 70px" class="btn btn-success btn-embossed">{:__('审核')}</button>
+                                <button type="reset" style="width: 70px" class="btn btn-danger btn-embossed">{:__('拒绝')}</button>
+                            </td>
                         </tr>
                         {/volist}
                     </table>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

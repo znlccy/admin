@@ -179,7 +179,6 @@ class Company extends Backend
      * 公司审核
      */
     public function review() {
-
         $review = Db::query('select id,name,legalperson,registeredaddress,businesslicense  from tb_company');
         $this->view->assign('company', $review);
         return $this->view->fetch();
