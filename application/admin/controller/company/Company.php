@@ -135,7 +135,6 @@ class Company extends Backend
         $manager = $basicInfo['manager'];
         $password = $basicInfo['password'];
         $grade = $_POST['grade'];
-        var_dump($grade);
         $expired = $basicInfo['expired'];
         $status = $basicInfo['status'];
 
@@ -151,10 +150,10 @@ class Company extends Backend
             }
         }
 
-        $url = 'javascript: window.close();';
+        /*$url = 'javascript: window.close();';
         Url::build($url);
         echo "<script>window.close();</script>";
-        var_dump($basicInfo);
+        var_dump($basicInfo);*/
     }
 
     /**
