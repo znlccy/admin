@@ -38,11 +38,14 @@
                             <td width="7%" style="vertical-align: middle"><input type="checkbox"></td>
                             <td width="18%" style="vertical-align: middle">{$vo.name}</td>
                             <td width="15%" style="vertical-align: middle">{$vo.legalperson}</td>
-                            <td width="23%" style="vertical-align: middle" >{$vo.registeredaddress}</td>
-                            <td width="18%" style="vertical-align: middle" ><img src="__PUBLIC__/assets/{$vo.businesslicense}" width="120" height="25" alt=""></td>
+                            <td width="23%" style="vertical-align: middle">{$vo.registeredaddress}</td>
+                            <td width="18%" style="vertical-align: middle">
+                                <button class="btn btn-info fa fa-upload" onclick="javascript:window.location.href='__URL__/upload'">{:__('上传执照')}</button>
+                                <!--<img src="__PUBLIC__/assets/{$vo.businesslicense}" width="120" height="25" alt="">-->
+                            </td>
                             <td style="vertical-align: middle" >
-                                <button type="submit" style="width: 70px" class="btn btn-success btn-embossed">{:__('审核')}</button>
-                                <button type="reset" style="width: 70px" class="btn btn-danger btn-embossed">{:__('拒绝')}</button>
+                                <button type="submit" style="width: 70px" class="btn btn-success fa fa-info btn-embossed">{:__('审核')}</button>
+                                <button type="reset" style="width: 70px" class="btn btn-danger fa fa-warning btn-embossed">{:__('拒绝')}</button>
                             </td>
                         </tr>
                         {/volist}

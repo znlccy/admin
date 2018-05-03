@@ -4,8 +4,9 @@ namespace app\admin\controller\company;
 
 use app\common\controller\Backend;
 use app\admin\model\Company as ConfigModel;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use think\Db;
-use think\Request;
+use think\Request as Request;
 use think\Url;
 use think\Session;
 
@@ -198,4 +199,42 @@ class Company extends Backend
         echo '批量拒绝';
     }
 
+    /**
+     * 上传页面
+     */
+    public function upload() {
+        return $this->view->fetch();
+    }
+
+    /**
+     * 上传凭证
+     */
+    public function uploadLicense() {
+        // 获取表单上传文件 例如上传了001.jpg
+        $file = request()->file('image');
+
+        // 移动到框架应用根目录/public/uploads/ 目录下
+        if($file){
+            $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+            if($info){
+                // 成功上传后 获取上传信息
+                // 输出 jpg
+                $result = Db::table('tb_company')->where('id', 2)->update(['businesslicense' => '/uploads/'.$info->getSaveName()]);
+                if ($result == 1) {
+                    return $this->success('上传成功');
+                } else {
+                    return $this->error('上传失败');
+                }
+                /*echo $info->getExtension();
+                // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
+                echo $info->getSaveName();
+                // 输出 42a79759f284b767dfcb2a0197904287.jpg
+                echo $info->getFilename();*/
+            }else{
+                // 上传失败获取错误信息
+                /*echo $file->getError();*/
+                return $this->error('上传失败');
+            }
+        }
+    }
 }
