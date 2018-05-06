@@ -26,7 +26,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {checkbox: true},
                         {field: 'id', title: __('Id')},
                         {field: 'name', title: __('Name')},
-                        {field: 'icon', title: __('Icon'), formatter: Table.api.formatter.icon},
+                        {field: 'icon', title: __('Icon'),operate: false, formatter: Table.api.formatter.image},
                         {field: 'platformprice', title: __('Platformprice'), operate:'BETWEEN'},
                         {field: 'realprice', title: __('Realprice'), operate:'BETWEEN'},
                         {field: 'status', title: __('Status'), visible:false, searchList: {"normal":__('normal'),"stop":__('stop')}},

@@ -31,7 +31,13 @@
                             <td><input type="checkbox"></td>
                             <td>{$vo.id}</td>
                             <td>{$vo.name}</td>
-                            <td>{$vo.icon}</td>
+                            <td>
+                                <div>
+                                    <img src="__PUBLIC__/{$vo.icon}" alt="" width="60" height="60">
+                                    <!--{$vo.icon}-->
+                                    <!--<img src="__PUBLIC__/" />-->
+                                </div>
+                            </td>
                             <td>{$vo.platformprice}</td>
                             <td>￥{$vo.realprice}</td>
                             <td>{$vo.status}</td>
