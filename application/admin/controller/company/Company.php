@@ -203,6 +203,7 @@ class Company extends Backend
      * 上传页面
      */
     public function upload() {
+        /*echo $_POST['id'];*/
         return $this->view->fetch();
     }
 
@@ -220,8 +221,9 @@ class Company extends Backend
                 // 成功上传后 获取上传信息
                 // 输出 jpg
                 //转换\为/
+                /*$id = $_POST['id'];*/
                 $keepPath = str_replace("\\", "/", $info->getSaveName());
-                $result = Db::table('tb_company')->where('id', 1)->update(['businesslicense' => '/uploads/'.$keepPath]);
+                $result = Db::table('tb_company')->where('id', 3)->update(['businesslicense' => '/uploads/'.$keepPath]);
                 if ($result == 1) {
                     return $this->success('上传成功');
                 } else {
@@ -244,6 +246,7 @@ class Company extends Backend
      * 实现单个审核
      */
     public function singleReview() {
+        /*var_dump($_POST['id']);*/
         $requestId = Request::instance()->get('id');
         echo $requestId;
         if ($requestId == null) {
@@ -262,6 +265,7 @@ class Company extends Backend
      * 实现单个拒绝
      */
     public function singleRefuse() {
+
         $requestId = Request::instance()->get('id');
         if ($requestId == null) {
             return $this->error('请求参数为空');
@@ -273,5 +277,6 @@ class Company extends Backend
                 return $this->error('拒绝失败');
             }
         }
+        /*echo $_POST();*/
     }
 }
