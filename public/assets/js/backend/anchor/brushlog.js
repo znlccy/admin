@@ -28,7 +28,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'account', title: __('Account')},
                         {field: 'money', title: __('Money'), operate:'BETWEEN'},
-                        {field: 'picture', title: __('Picture')},
+                        {field: 'picture', title: __('Picture'),operate: false, formatter: Table.api.formatter.image},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
