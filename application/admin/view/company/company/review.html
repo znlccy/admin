@@ -7,8 +7,8 @@
                 <div class="widget-body no-padding">
                     <div id="toolbar" class="toolbar">
                         <!--<a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>-->
-                        <a href="__URL__/multiReview" class="btn btn-info btn-review {:$auth->check('company/company/review')?'':'hide'}" title="{:__('批量审核')}" ><i class="fa fa-pencil"></i> {:__('批量审核')}</a>
-                        <a href="__URL__/multiRefuse" class="btn btn-danger btn-review {:$auth->check('company/company/refuse')?'':'hide'}" title="{:__('批量拒绝')}" ><i class="fa fa-pencil"></i> {:__('批量拒绝')}</a>
+                        <!--<a href="__URL__/multiReview" name="id[]" class="btn btn-info btn-review {:$auth->check('company/company/review')?'':'hide'}" title="{:__('批量审核')}" ><i class="fa fa-pencil"></i> {:__('批量审核')}</a>
+                        <a href="__URL__/multiRefuse" class="btn btn-danger btn-review {:$auth->check('company/company/refuse')?'':'hide'}" title="{:__('批量拒绝')}" ><i class="fa fa-pencil"></i> {:__('批量拒绝')}</a>-->
                         <a href="__URL__/index" class="btn btn-primary btn-review {:$auth->check('company/company/refuse')?'':'hide'}" title="{:__('返回')}"><i class="fa fa-recycle">{:__('返回')}</i></a>
                         <!--<a href="javascript:;" class="btn btn-danger btn-import {:$auth->check('company/company/import')?'':'hide'}" title="{:__('Import')}" id="btn-import-file" data-url="ajax/upload" data-mimetype="csv,xls,xlsx" data-multiple="false"><i class="fa fa-upload"></i> {:__('Import')}</a>
 
@@ -26,7 +26,7 @@
                            data-operate-detail="{:$auth->check('company/company/detail')}"
                            width="100%">
                         <tr align="center">
-                            <td><input type="checkbox"></td>
+                            <!--<td><input type="checkbox" id="allChecks" name="id[]" value="id" onclick="checkAll()"></td>-->
                             <td><strong>ID</strong></td>
                             <td><strong>公司名称</strong></td>
                             <td><strong>法人</strong></td>
@@ -36,7 +36,9 @@
                         </tr>
                         {volist id="vo" name="company"}
                         <tr align="center" valign="center">
-                            <td width="5%" style="vertical-align: middle"><input type="checkbox"></td>
+                            <!--<td width="5%" style="vertical-align: middle">
+                                <input type="checkbox" id="id[]" value="{$vo.id}" class="checkbox">
+                            </td>-->
                             <td width="5%" style="vertical-align: middle" id="vo[id]">{$vo.id}</td>
                             <td width="18%" style="vertical-align: middle" id="vo[name]">{$vo.name}</td>
                             <td width="15%" style="vertical-align: middle">{$vo.legalperson}</td>

@@ -189,13 +189,14 @@ class Company extends Backend
      * 批量审核
      */
     public function multiReview() {
-        echo '批量审核';
+        /*$getId = $_REQUEST['id'];
+        var_dump($getId);*/
     }
 
     /**
      * 批量拒绝
      */
-    public function multiRefuse() {
+    public function multiRefuse($arrayId) {
         echo '批量拒绝';
     }
 
@@ -283,6 +284,5 @@ class Company extends Backend
                 return $this->error('拒绝失败');
             }
         }
-        /*echo $_POST();*/
     }
 }
