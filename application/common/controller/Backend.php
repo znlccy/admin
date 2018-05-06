@@ -47,7 +47,7 @@ class Backend extends Controller
     /**
      * 是否是关联查询
      */
-    protected $relationSearch = false;
+    protected $relationSearch = true;
 
     /**
      * 是否开启数据限制

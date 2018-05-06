@@ -99,14 +99,16 @@ class Company extends Backend
      * 主播管理
      */
     public function anchor(){
-        $this->redirect('admin/company/companyanchor');
+        $cid = Request::instance()->get('id');
+        $this->redirect('admin/company/companyanchor', ['cid' => $cid]);
     }
 
     /**
      * 分组管理
      */
     public function group() {
-        $this->redirect('admin/company/companygroup');
+        $cid = Request::instance()->get('id');
+        $this->redirect('admin/company/companygroup', ['cid' => $cid]);
     }
 
     /**

@@ -51,14 +51,14 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                 text: __('分组'),
                                 icon: 'fa fa-list',
                                 classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                url: 'company/company/group'
+                                url: 'company/company/group?id={$row.id}'
                             },
                             {
                                 name: 'detail',
                                 text: __('主播'),
                                 icon: 'fa fa-list',
                                 classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                url: 'company/company/anchor'
+                                url: 'company/company/anchor?id={$row.id}'
                             },
                             {
                                 name: 'detail',

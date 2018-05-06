@@ -61,8 +61,6 @@ class Anchor extends Backend
                     ->select();
 
             foreach ($list as $row) {
-                
-                
             }
             $list = collection($list)->toArray();
             $result = array("total" => $total, "rows" => $list);
