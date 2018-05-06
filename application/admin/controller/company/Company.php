@@ -259,7 +259,7 @@ class Company extends Backend
         if ($requestId == null) {
             return $this->error('请求参数为空');
         } else {
-            $result = Db::table('tb_company')->where('id', $requestId)->update(['reviewstatus' => 'pass']);
+            $result = Db::table('tb_company')->where('id', $requestId)->update(['status' => 'normal']);
             if ($result == 1) {
                 return $this->success('审核通过');
             } else {
@@ -272,12 +272,11 @@ class Company extends Backend
      * 实现单个拒绝
      */
     public function singleRefuse() {
-
         $requestId = Request::instance()->get('id');
         if ($requestId == null) {
             return $this->error('请求参数为空');
         } else {
-            $result = Db::table('tb_company')->where('id', $requestId)->update(['reviewstatus' => 'fail']);
+            $result = Db::table('tb_company')->where('id', $requestId)->update(['status' => 'stop']);
             if ($result == 1) {
                 return $this->success('拒绝成功');
             } else {
