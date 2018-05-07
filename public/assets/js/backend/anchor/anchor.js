@@ -46,7 +46,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'sign', title: __('Sign'), visible:false, searchList: {"signed":__('signed'),"nosign":__('nosign')}},
                         {field: 'sign_text', title: __('Sign'), operate:false},
                         {field: 'account', title: __('Account')},
-                        {field: 'status', title: __('Status'), visible:false, searchList: {"normal":__('normal'),"stop":__('stop')}},
+                        {field: 'status', title: __('Status'), visible:false, searchList: {"normal":__('normal'),"stop":__('stop')}, formatter: Table.api.formatter.status},
                         {field: 'status_text', title: __('Status'), operate:false},
                         {field: 'remark', title: __('Remark'), visible: false},
                         {field: 'group', title: __('Group'), visible: false},
