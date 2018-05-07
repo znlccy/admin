@@ -26,7 +26,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {checkbox: true},
                         {field: 'id', title: __('Id')},
                         {field: 'account', title: __('Account')},
-                        {field: 'company.id', title: __('Company.id')},
+                        /*{field: 'company.id', title: __('Company.id')},*/
+                        {field: 'company.name', title: __('所属公司')},
                         /*{field: 'cid', title: __('Cid')},*/
                         {field: 'role', title: __('Role')},
                         {field: 'lastactivetime', title: __('Lastactivetime'), operate:'RANGE', addclass:'datetimerange'},

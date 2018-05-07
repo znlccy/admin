@@ -82,7 +82,7 @@ class Company extends Backend
         $this->view->assign('typeList', ConfigModel::getTypeList());
         $this->view->assign('groupList', ConfigModel::getGroupList());*/
 
-        $manager = Db::query('select manager from tb_company');
+        $manager = Db::query('select username as manager from tb_admin');
         if ($manager == null) {
             $this->error('数据库里面还没有项目经理');
         }
@@ -161,14 +161,14 @@ class Company extends Backend
     /**
      * 获得商务经理
      */
-    public function getManagerList() {
+    /*public function getManagerList() {
         $manager = Db::query('select username from tb_admin');
         if ($manager == null) {
             $this->error('数据库里面还没有项目经理');
         }
         $this->view->assign('manager', $manager);
         return $this->view->fetch('company/company/detail');
-    }
+    }*/
 
     /**
      * 获取登录用户名
