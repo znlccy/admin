@@ -162,7 +162,7 @@ class Company extends Backend
      * 获得商务经理
      */
     public function getManagerList() {
-        $manager = Db::query('select manager from tb_company');
+        $manager = Db::query('select username from tb_admin');
         if ($manager == null) {
             $this->error('数据库里面还没有项目经理');
         }

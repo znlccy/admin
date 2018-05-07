@@ -1,21 +1,48 @@
 <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
-
+    <div class="form-group">
+        <label for="c-cellphone" class="control-label col-xs-12 col-sm-2">{:__('Cellphone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-cellphone" class="form-control" name="row[cellphone]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-password" class="control-label col-xs-12 col-sm-2">{:__('Password')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-password" class="form-control" name="row[password]" type="password" value="">
+        </div>
+    </div>
     <div class="form-group">
         <label for="c-name" class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-name" class="form-control" name="row[name]" type="text" value="">
         </div>
     </div>
-    <div class="form-group">
+    <!--<div class="form-group">
         <label for="c-anchornum" class="control-label col-xs-12 col-sm-2">{:__('Anchornum')}:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-anchornum" class="form-control" name="row[anchornum]" type="number" value="0">
         </div>
-    </div>
+    </div>-->
+    <!--<div class="form-group">
+        <label for="c-grade" class="control-label col-xs-12 col-sm-3">{:__('Grade')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <select name="grade" id="c-grade" class="form-control" placeholder="请输入商务经理">
+                <option name="free" selected readonly="readonly">免费版</option>
+                <option>会员版</option>
+                <option>高级会员版</option>
+                <option>定制版</option>
+            </select>
+        </div>
+    </div>-->
     <div class="form-group">
         <label for="c-grade" class="control-label col-xs-12 col-sm-2">{:__('Grade')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-grade" class="form-control" name="row[grade]" type="number" value="0">
+            <select name="grade" id="c-grade" class="form-control" placeholder="请输入商务经理">
+                <option name="free" selected readonly="readonly">免费版</option>
+                <option>会员版</option>
+                <option>高级会员版</option>
+                <option>定制版</option>
+            </select>
         </div>
     </div>
     <div class="form-group">
@@ -31,16 +58,28 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="c-introduce" class="control-label col-xs-12 col-sm-2">{:__('公司介绍')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea name="row[introduce]" placeholder="请输入内容" class="form-control"  id="c-introduce" cols="30" rows="5"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-link" class="control-label col-xs-12 col-sm-2">{:__('联系方式')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-link" placeholder="请输入联系方式" class="form-control" name="row[link]" type="text">
+        </div>
+    </div>
+    <!--<div class="form-group">
         <label for="c-status" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-status" class="form-control" name="row[status]" type="text" value="">
         </div>
-    </div>
+    </div>-->
     <div class="form-group layer-footer">
         <label class="control-label col-xs-12 col-sm-2"></label>
         <div class="col-xs-12 col-sm-8">
-            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
-            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('创建')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('取消')}</button>
         </div>
     </div>
 </form>
