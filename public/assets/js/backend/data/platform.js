@@ -34,7 +34,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                 text: __('Detail'),
                                 icon: 'fa fa-list',
                                 classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                url: 'data/platform/config'
+                                url: 'data/platform/config?id={$row.id}'
                             }],
                             formatter: Table.api.formatter.operate}
                     ]

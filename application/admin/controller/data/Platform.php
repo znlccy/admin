@@ -5,6 +5,7 @@ namespace app\admin\controller\data;
 use app\common\controller\Backend;
 use app\admin\model\GiftModel;
 use think\Db;
+use think\Request as Request;
 
 /**
  * @icon fa fa-circle-o
@@ -42,27 +43,8 @@ class Platform extends Backend
             $this->error(__('No Results were found'));
         $this->view->assign("row", $row);
         return $this->view->fetch('admin@data/giftconfig/index');*/
-        $this->redirect('admin/data/giftconfig',3, '正在跳转，请稍候......');
+        $pid = Request::instance()->get('id');
+        $this->redirect('admin/data/giftconfig',['pid' => $pid]);
     }
 
-    /**
-     * 创建礼物配置
-     */
-    public function create() {
-        echo "创建礼物配置";
-    }
-
-    /**
-     * 修改礼物配置
-     */
-    public function editGift() {
-        echo "修改礼物配置";
-    }
-
-    /**
-     * 删除礼物配置
-     */
-    public function delGift() {
-
-    }
 }

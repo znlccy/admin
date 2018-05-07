@@ -39,4 +39,8 @@ class GiftConfig extends Model
 
 
 
+    public function platform()
+    {
+        return $this->belongsTo('Platform', 'pid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }
