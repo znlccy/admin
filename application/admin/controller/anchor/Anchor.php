@@ -80,6 +80,7 @@ class Anchor extends Backend
         $group = Db::table('tb_anchor_group')->select();
         $this->view->assign("group", $group);
         $this->view->assign("row", $row->toArray());
+
         return $this->view->fetch();
     }
 
@@ -105,7 +106,8 @@ class Anchor extends Backend
      * 刷礼记录界面
      */
     public function brush() {
-        $this->redirect('admin/anchor/brushlog');
+        $aid = Request::instance()->get('id');
+        $this->redirect('admin/anchor/brushlog', ['aid' => $aid]);
     }
 
     /**

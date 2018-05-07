@@ -30,4 +30,8 @@ class BrushLog extends Model
 
 
 
+    public function anchor()
+    {
+        return $this->belongsTo('Anchor', 'aid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }

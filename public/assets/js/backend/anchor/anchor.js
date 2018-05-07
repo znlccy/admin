@@ -92,7 +92,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                     text: __('刷礼'),
                                     icon: 'fa fa-list',
                                     classname: 'btn btn-info btn-xs btn-detail btn-dialog',
-                                    url: 'anchor/anchor/brush'
+                                    url: 'anchor/anchor/brush?id={$row.id}'
                                 }
                             ],
                             formatter: Table.api.formatter.operate}
