@@ -286,4 +286,55 @@ class Company extends Backend
             }
         }
     }
+
+    public function index() {
+
+        $loginUser = Session::get('admin');
+        $username = $loginUser['username'];
+        $where = 'manager='.$username;
+
+        //设置过滤方法
+        $this->request->filter(['strip_tags']);
+        if ($this->request->isAjax())
+        {
+            //如果发送的来源是Selectpage，则转发到Selectpage
+            if ($this->request->request('keyField'))
+            {
+                return $this->selectpage();
+            }
+            list($where, $sort, $order, $offset, $limit) = $this->buildparams();
+            if ($username == 'admin') {
+                $total = $this->model
+                    ->where($where)
+                    ->order($sort, $order)
+                    ->count();
+
+                $list = $this->model
+                    ->where($where)
+                    ->order($sort, $order)
+                    ->limit($offset, $limit)
+                    ->select();
+            } else {
+                $total = $this->model
+                    ->where('manager', $username)
+                    ->order($sort, $order)
+                    ->count();
+
+                $list = $this->model
+                    ->where('manager', $username)
+                    ->order($sort, $order)
+                    ->limit($offset, $limit)
+                    ->select();
+            }
+            foreach ($list as $k => $v)
+            {
+                $v->password = '';
+                $v->salt = '';
+            }
+            $result = array("total" => $total, "rows" => $list);
+
+            return json($result);
+        }
+        return $this->view->fetch();
+    }
 }

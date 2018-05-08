@@ -3,6 +3,7 @@
 namespace app\admin\controller\data;
 
 use app\common\controller\Backend;
+use think\Db;
 
 /**
  * 
@@ -65,6 +66,13 @@ class Gift extends Backend
             return json($result);
         }
         return $this->view->fetch();
+    }
+
+    /**
+     * 实现获得最高礼物价值
+     */
+    public function maxGift() {
+        Db::query('select max(maxgift) from tb_gift');
     }
 
 }

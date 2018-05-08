@@ -6,7 +6,6 @@ use think\Validate;
 
 class Admin extends Validate
 {
-
     /**
      * 验证规则
      */
