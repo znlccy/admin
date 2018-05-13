@@ -337,4 +337,41 @@ class Company extends Backend
         }
         return $this->view->fetch();
     }
+
+    /**
+     * 添加部门
+     */
+    public function addPartment() {
+        $partment = new \app\admin\model\Partment();
+        $data = $partment::get(1);
+        var_dump($data);
+    }
+
+    /**
+     * 删除部门
+     */
+    public function deletePartment() {
+
+    }
+
+    /**
+     * 修改部门
+     */
+    public function updateParment() {
+
+    }
+
+    /**
+     * 获取所有部门
+     */
+    public function getPartmentAll() {
+
+    }
+
+    /**
+     * 获取一个部门
+     */
+    public function getPartment() {
+
+    }
 }

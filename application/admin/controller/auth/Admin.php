@@ -35,7 +35,8 @@ class Admin extends Backend
         $groupdata = [];
         if ($this->auth->isSuperAdmin())
         {
-            $result = Tree::instance()->getTreeList(Tree::instance()->getTreeArray(0));
+            $result = Tree::instance()->getTreeList(Tree::
+            instance()->getTreeArray(0));
             foreach ($result as $k => $v)
             {
                 $groupdata[$v['id']] = $v['name'];

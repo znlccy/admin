@@ -4,7 +4,7 @@ namespace app\admin\validate;
 
 use think\Validate;
 
-class GiftConfig extends Validate
+class Division extends Validate
 {
     /**
      * 验证规则

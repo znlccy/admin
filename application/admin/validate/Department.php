@@ -1,8 +1,27 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/5/10
- * Time: 17:43
- * Comment: 
- */
+
+namespace app\admin\validate;
+
+use think\Validate;
+
+class Department extends Validate
+{
+    /**
+     * 验证规则
+     */
+    protected $rule = [
+    ];
+    /**
+     * 提示消息
+     */
+    protected $message = [
+    ];
+    /**
+     * 验证场景
+     */
+    protected $scene = [
+        'add'  => [],
+        'edit' => [],
+    ];
+    
+}
