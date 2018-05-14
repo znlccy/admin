@@ -39,6 +39,7 @@ class Index extends Backend
             'user/user'         => ['anchor', 'green', 'badge'],
             'company/company'   => ['company', 'black', 'badge'],
             'data/platform'     => ['data', 'grey', 'badge'],
+            'anchor/anchor'     => ['anchor','blue'],
                 ], $this->view->site['fixedpage']);
         $action = $this->request->request('action');
         if ($this->request->isPost())
